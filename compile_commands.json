@@ -1,0 +1,827 @@
+[
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/server/webEngine.cc.o -c /home/hh/searchEngine/src/server/webEngine.cc",
+  "file": "/home/hh/searchEngine/src/server/webEngine.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/cache/cache_manager.cc.o -c /home/hh/searchEngine/src/cache/cache_manager.cc",
+  "file": "/home/hh/searchEngine/src/cache/cache_manager.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/cache/lru_cache.cc.o -c /home/hh/searchEngine/src/cache/lru_cache.cc",
+  "file": "/home/hh/searchEngine/src/cache/lru_cache.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/cache/redis.cc.o -c /home/hh/searchEngine/src/cache/redis.cc",
+  "file": "/home/hh/searchEngine/src/cache/redis.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/common/configuration.cc.o -c /home/hh/searchEngine/src/common/configuration.cc",
+  "file": "/home/hh/searchEngine/src/common/configuration.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/common/dir_scanner.cc.o -c /home/hh/searchEngine/src/common/dir_scanner.cc",
+  "file": "/home/hh/searchEngine/src/common/dir_scanner.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/common/file.cc.o -c /home/hh/searchEngine/src/common/file.cc",
+  "file": "/home/hh/searchEngine/src/common/file.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/common/split_tool.cc.o -c /home/hh/searchEngine/src/common/split_tool.cc",
+  "file": "/home/hh/searchEngine/src/common/split_tool.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/key/dict_producer.cc.o -c /home/hh/searchEngine/src/key/dict_producer.cc",
+  "file": "/home/hh/searchEngine/src/key/dict_producer.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/key/dictionary.cc.o -c /home/hh/searchEngine/src/key/dictionary.cc",
+  "file": "/home/hh/searchEngine/src/key/dictionary.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/key/key_recommander.cc.o -c /home/hh/searchEngine/src/key/key_recommander.cc",
+  "file": "/home/hh/searchEngine/src/key/key_recommander.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/key/myTimer.cc.o -c /home/hh/searchEngine/src/key/myTimer.cc",
+  "file": "/home/hh/searchEngine/src/key/myTimer.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/reactor/acceptor.cc.o -c /home/hh/searchEngine/src/reactor/acceptor.cc",
+  "file": "/home/hh/searchEngine/src/reactor/acceptor.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/reactor/condition.cc.o -c /home/hh/searchEngine/src/reactor/condition.cc",
+  "file": "/home/hh/searchEngine/src/reactor/condition.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/reactor/event_loop.cc.o -c /home/hh/searchEngine/src/reactor/event_loop.cc",
+  "file": "/home/hh/searchEngine/src/reactor/event_loop.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/reactor/inet_address.cc.o -c /home/hh/searchEngine/src/reactor/inet_address.cc",
+  "file": "/home/hh/searchEngine/src/reactor/inet_address.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/reactor/mutex_lock.cc.o -c /home/hh/searchEngine/src/reactor/mutex_lock.cc",
+  "file": "/home/hh/searchEngine/src/reactor/mutex_lock.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/reactor/socket.cc.o -c /home/hh/searchEngine/src/reactor/socket.cc",
+  "file": "/home/hh/searchEngine/src/reactor/socket.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/reactor/socket_io.cc.o -c /home/hh/searchEngine/src/reactor/socket_io.cc",
+  "file": "/home/hh/searchEngine/src/reactor/socket_io.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/reactor/task_queue.cc.o -c /home/hh/searchEngine/src/reactor/task_queue.cc",
+  "file": "/home/hh/searchEngine/src/reactor/task_queue.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/reactor/tcp_connection.cc.o -c /home/hh/searchEngine/src/reactor/tcp_connection.cc",
+  "file": "/home/hh/searchEngine/src/reactor/tcp_connection.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/reactor/thread.cc.o -c /home/hh/searchEngine/src/reactor/thread.cc",
+  "file": "/home/hh/searchEngine/src/reactor/thread.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/reactor/thread_pool.cc.o -c /home/hh/searchEngine/src/reactor/thread_pool.cc",
+  "file": "/home/hh/searchEngine/src/reactor/thread_pool.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/web/calculate.cc.o -c /home/hh/searchEngine/src/web/calculate.cc",
+  "file": "/home/hh/searchEngine/src/web/calculate.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/web/page_lib.cc.o -c /home/hh/searchEngine/src/web/page_lib.cc",
+  "file": "/home/hh/searchEngine/src/web/page_lib.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/web/page_lib_preprocessor.cc.o -c /home/hh/searchEngine/src/web/page_lib_preprocessor.cc",
+  "file": "/home/hh/searchEngine/src/web/page_lib_preprocessor.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/web/rss_parser.cc.o -c /home/hh/searchEngine/src/web/rss_parser.cc",
+  "file": "/home/hh/searchEngine/src/web/rss_parser.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/web/web_page.cc.o -c /home/hh/searchEngine/src/web/web_page.cc",
+  "file": "/home/hh/searchEngine/src/web/web_page.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/web/web_page_query.cc.o -c /home/hh/searchEngine/src/web/web_page_query.cc",
+  "file": "/home/hh/searchEngine/src/web/web_page_query.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/webEngine.dir/src/web/web_page_searcher.cc.o -c /home/hh/searchEngine/src/web/web_page_searcher.cc",
+  "file": "/home/hh/searchEngine/src/web/web_page_searcher.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/server/keyCommander.cc.o -c /home/hh/searchEngine/src/server/keyCommander.cc",
+  "file": "/home/hh/searchEngine/src/server/keyCommander.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/cache/cache_manager.cc.o -c /home/hh/searchEngine/src/cache/cache_manager.cc",
+  "file": "/home/hh/searchEngine/src/cache/cache_manager.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/cache/lru_cache.cc.o -c /home/hh/searchEngine/src/cache/lru_cache.cc",
+  "file": "/home/hh/searchEngine/src/cache/lru_cache.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/cache/redis.cc.o -c /home/hh/searchEngine/src/cache/redis.cc",
+  "file": "/home/hh/searchEngine/src/cache/redis.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/common/configuration.cc.o -c /home/hh/searchEngine/src/common/configuration.cc",
+  "file": "/home/hh/searchEngine/src/common/configuration.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/common/dir_scanner.cc.o -c /home/hh/searchEngine/src/common/dir_scanner.cc",
+  "file": "/home/hh/searchEngine/src/common/dir_scanner.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/common/file.cc.o -c /home/hh/searchEngine/src/common/file.cc",
+  "file": "/home/hh/searchEngine/src/common/file.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/common/split_tool.cc.o -c /home/hh/searchEngine/src/common/split_tool.cc",
+  "file": "/home/hh/searchEngine/src/common/split_tool.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/key/dict_producer.cc.o -c /home/hh/searchEngine/src/key/dict_producer.cc",
+  "file": "/home/hh/searchEngine/src/key/dict_producer.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/key/dictionary.cc.o -c /home/hh/searchEngine/src/key/dictionary.cc",
+  "file": "/home/hh/searchEngine/src/key/dictionary.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/key/key_recommander.cc.o -c /home/hh/searchEngine/src/key/key_recommander.cc",
+  "file": "/home/hh/searchEngine/src/key/key_recommander.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/key/myTimer.cc.o -c /home/hh/searchEngine/src/key/myTimer.cc",
+  "file": "/home/hh/searchEngine/src/key/myTimer.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/reactor/acceptor.cc.o -c /home/hh/searchEngine/src/reactor/acceptor.cc",
+  "file": "/home/hh/searchEngine/src/reactor/acceptor.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/reactor/condition.cc.o -c /home/hh/searchEngine/src/reactor/condition.cc",
+  "file": "/home/hh/searchEngine/src/reactor/condition.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/reactor/event_loop.cc.o -c /home/hh/searchEngine/src/reactor/event_loop.cc",
+  "file": "/home/hh/searchEngine/src/reactor/event_loop.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/reactor/inet_address.cc.o -c /home/hh/searchEngine/src/reactor/inet_address.cc",
+  "file": "/home/hh/searchEngine/src/reactor/inet_address.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/reactor/mutex_lock.cc.o -c /home/hh/searchEngine/src/reactor/mutex_lock.cc",
+  "file": "/home/hh/searchEngine/src/reactor/mutex_lock.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/reactor/socket.cc.o -c /home/hh/searchEngine/src/reactor/socket.cc",
+  "file": "/home/hh/searchEngine/src/reactor/socket.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/reactor/socket_io.cc.o -c /home/hh/searchEngine/src/reactor/socket_io.cc",
+  "file": "/home/hh/searchEngine/src/reactor/socket_io.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/reactor/task_queue.cc.o -c /home/hh/searchEngine/src/reactor/task_queue.cc",
+  "file": "/home/hh/searchEngine/src/reactor/task_queue.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/reactor/tcp_connection.cc.o -c /home/hh/searchEngine/src/reactor/tcp_connection.cc",
+  "file": "/home/hh/searchEngine/src/reactor/tcp_connection.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/reactor/thread.cc.o -c /home/hh/searchEngine/src/reactor/thread.cc",
+  "file": "/home/hh/searchEngine/src/reactor/thread.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/reactor/thread_pool.cc.o -c /home/hh/searchEngine/src/reactor/thread_pool.cc",
+  "file": "/home/hh/searchEngine/src/reactor/thread_pool.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/web/calculate.cc.o -c /home/hh/searchEngine/src/web/calculate.cc",
+  "file": "/home/hh/searchEngine/src/web/calculate.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/web/page_lib.cc.o -c /home/hh/searchEngine/src/web/page_lib.cc",
+  "file": "/home/hh/searchEngine/src/web/page_lib.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/web/page_lib_preprocessor.cc.o -c /home/hh/searchEngine/src/web/page_lib_preprocessor.cc",
+  "file": "/home/hh/searchEngine/src/web/page_lib_preprocessor.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/web/rss_parser.cc.o -c /home/hh/searchEngine/src/web/rss_parser.cc",
+  "file": "/home/hh/searchEngine/src/web/rss_parser.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/web/web_page.cc.o -c /home/hh/searchEngine/src/web/web_page.cc",
+  "file": "/home/hh/searchEngine/src/web/web_page.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/web/web_page_query.cc.o -c /home/hh/searchEngine/src/web/web_page_query.cc",
+  "file": "/home/hh/searchEngine/src/web/web_page_query.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/keyCommander.dir/src/web/web_page_searcher.cc.o -c /home/hh/searchEngine/src/web/web_page_searcher.cc",
+  "file": "/home/hh/searchEngine/src/web/web_page_searcher.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/server/searchEngine.cc.o -c /home/hh/searchEngine/src/server/searchEngine.cc",
+  "file": "/home/hh/searchEngine/src/server/searchEngine.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/cache/cache_manager.cc.o -c /home/hh/searchEngine/src/cache/cache_manager.cc",
+  "file": "/home/hh/searchEngine/src/cache/cache_manager.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/cache/lru_cache.cc.o -c /home/hh/searchEngine/src/cache/lru_cache.cc",
+  "file": "/home/hh/searchEngine/src/cache/lru_cache.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/cache/redis.cc.o -c /home/hh/searchEngine/src/cache/redis.cc",
+  "file": "/home/hh/searchEngine/src/cache/redis.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/common/configuration.cc.o -c /home/hh/searchEngine/src/common/configuration.cc",
+  "file": "/home/hh/searchEngine/src/common/configuration.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/common/dir_scanner.cc.o -c /home/hh/searchEngine/src/common/dir_scanner.cc",
+  "file": "/home/hh/searchEngine/src/common/dir_scanner.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/common/file.cc.o -c /home/hh/searchEngine/src/common/file.cc",
+  "file": "/home/hh/searchEngine/src/common/file.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/common/split_tool.cc.o -c /home/hh/searchEngine/src/common/split_tool.cc",
+  "file": "/home/hh/searchEngine/src/common/split_tool.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/key/dict_producer.cc.o -c /home/hh/searchEngine/src/key/dict_producer.cc",
+  "file": "/home/hh/searchEngine/src/key/dict_producer.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/key/dictionary.cc.o -c /home/hh/searchEngine/src/key/dictionary.cc",
+  "file": "/home/hh/searchEngine/src/key/dictionary.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/key/key_recommander.cc.o -c /home/hh/searchEngine/src/key/key_recommander.cc",
+  "file": "/home/hh/searchEngine/src/key/key_recommander.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/key/myTimer.cc.o -c /home/hh/searchEngine/src/key/myTimer.cc",
+  "file": "/home/hh/searchEngine/src/key/myTimer.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/reactor/acceptor.cc.o -c /home/hh/searchEngine/src/reactor/acceptor.cc",
+  "file": "/home/hh/searchEngine/src/reactor/acceptor.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/reactor/condition.cc.o -c /home/hh/searchEngine/src/reactor/condition.cc",
+  "file": "/home/hh/searchEngine/src/reactor/condition.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/reactor/event_loop.cc.o -c /home/hh/searchEngine/src/reactor/event_loop.cc",
+  "file": "/home/hh/searchEngine/src/reactor/event_loop.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/reactor/inet_address.cc.o -c /home/hh/searchEngine/src/reactor/inet_address.cc",
+  "file": "/home/hh/searchEngine/src/reactor/inet_address.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/reactor/mutex_lock.cc.o -c /home/hh/searchEngine/src/reactor/mutex_lock.cc",
+  "file": "/home/hh/searchEngine/src/reactor/mutex_lock.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/reactor/socket.cc.o -c /home/hh/searchEngine/src/reactor/socket.cc",
+  "file": "/home/hh/searchEngine/src/reactor/socket.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/reactor/socket_io.cc.o -c /home/hh/searchEngine/src/reactor/socket_io.cc",
+  "file": "/home/hh/searchEngine/src/reactor/socket_io.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/reactor/task_queue.cc.o -c /home/hh/searchEngine/src/reactor/task_queue.cc",
+  "file": "/home/hh/searchEngine/src/reactor/task_queue.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/reactor/tcp_connection.cc.o -c /home/hh/searchEngine/src/reactor/tcp_connection.cc",
+  "file": "/home/hh/searchEngine/src/reactor/tcp_connection.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/reactor/thread.cc.o -c /home/hh/searchEngine/src/reactor/thread.cc",
+  "file": "/home/hh/searchEngine/src/reactor/thread.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/reactor/thread_pool.cc.o -c /home/hh/searchEngine/src/reactor/thread_pool.cc",
+  "file": "/home/hh/searchEngine/src/reactor/thread_pool.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/web/calculate.cc.o -c /home/hh/searchEngine/src/web/calculate.cc",
+  "file": "/home/hh/searchEngine/src/web/calculate.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/web/page_lib.cc.o -c /home/hh/searchEngine/src/web/page_lib.cc",
+  "file": "/home/hh/searchEngine/src/web/page_lib.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/web/page_lib_preprocessor.cc.o -c /home/hh/searchEngine/src/web/page_lib_preprocessor.cc",
+  "file": "/home/hh/searchEngine/src/web/page_lib_preprocessor.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/web/rss_parser.cc.o -c /home/hh/searchEngine/src/web/rss_parser.cc",
+  "file": "/home/hh/searchEngine/src/web/rss_parser.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/web/web_page.cc.o -c /home/hh/searchEngine/src/web/web_page.cc",
+  "file": "/home/hh/searchEngine/src/web/web_page.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/web/web_page_query.cc.o -c /home/hh/searchEngine/src/web/web_page_query.cc",
+  "file": "/home/hh/searchEngine/src/web/web_page_query.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/searchEngine.dir/src/web/web_page_searcher.cc.o -c /home/hh/searchEngine/src/web/web_page_searcher.cc",
+  "file": "/home/hh/searchEngine/src/web/web_page_searcher.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/client/client.cc.o -c /home/hh/searchEngine/src/client/client.cc",
+  "file": "/home/hh/searchEngine/src/client/client.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/cache/cache_manager.cc.o -c /home/hh/searchEngine/src/cache/cache_manager.cc",
+  "file": "/home/hh/searchEngine/src/cache/cache_manager.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/cache/lru_cache.cc.o -c /home/hh/searchEngine/src/cache/lru_cache.cc",
+  "file": "/home/hh/searchEngine/src/cache/lru_cache.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/cache/redis.cc.o -c /home/hh/searchEngine/src/cache/redis.cc",
+  "file": "/home/hh/searchEngine/src/cache/redis.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/common/configuration.cc.o -c /home/hh/searchEngine/src/common/configuration.cc",
+  "file": "/home/hh/searchEngine/src/common/configuration.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/common/dir_scanner.cc.o -c /home/hh/searchEngine/src/common/dir_scanner.cc",
+  "file": "/home/hh/searchEngine/src/common/dir_scanner.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/common/file.cc.o -c /home/hh/searchEngine/src/common/file.cc",
+  "file": "/home/hh/searchEngine/src/common/file.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/common/split_tool.cc.o -c /home/hh/searchEngine/src/common/split_tool.cc",
+  "file": "/home/hh/searchEngine/src/common/split_tool.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/key/dict_producer.cc.o -c /home/hh/searchEngine/src/key/dict_producer.cc",
+  "file": "/home/hh/searchEngine/src/key/dict_producer.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/key/dictionary.cc.o -c /home/hh/searchEngine/src/key/dictionary.cc",
+  "file": "/home/hh/searchEngine/src/key/dictionary.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/key/key_recommander.cc.o -c /home/hh/searchEngine/src/key/key_recommander.cc",
+  "file": "/home/hh/searchEngine/src/key/key_recommander.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/key/myTimer.cc.o -c /home/hh/searchEngine/src/key/myTimer.cc",
+  "file": "/home/hh/searchEngine/src/key/myTimer.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/reactor/acceptor.cc.o -c /home/hh/searchEngine/src/reactor/acceptor.cc",
+  "file": "/home/hh/searchEngine/src/reactor/acceptor.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/reactor/condition.cc.o -c /home/hh/searchEngine/src/reactor/condition.cc",
+  "file": "/home/hh/searchEngine/src/reactor/condition.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/reactor/event_loop.cc.o -c /home/hh/searchEngine/src/reactor/event_loop.cc",
+  "file": "/home/hh/searchEngine/src/reactor/event_loop.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/reactor/inet_address.cc.o -c /home/hh/searchEngine/src/reactor/inet_address.cc",
+  "file": "/home/hh/searchEngine/src/reactor/inet_address.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/reactor/mutex_lock.cc.o -c /home/hh/searchEngine/src/reactor/mutex_lock.cc",
+  "file": "/home/hh/searchEngine/src/reactor/mutex_lock.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/reactor/socket.cc.o -c /home/hh/searchEngine/src/reactor/socket.cc",
+  "file": "/home/hh/searchEngine/src/reactor/socket.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/reactor/socket_io.cc.o -c /home/hh/searchEngine/src/reactor/socket_io.cc",
+  "file": "/home/hh/searchEngine/src/reactor/socket_io.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/reactor/task_queue.cc.o -c /home/hh/searchEngine/src/reactor/task_queue.cc",
+  "file": "/home/hh/searchEngine/src/reactor/task_queue.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/reactor/tcp_connection.cc.o -c /home/hh/searchEngine/src/reactor/tcp_connection.cc",
+  "file": "/home/hh/searchEngine/src/reactor/tcp_connection.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/reactor/thread.cc.o -c /home/hh/searchEngine/src/reactor/thread.cc",
+  "file": "/home/hh/searchEngine/src/reactor/thread.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/reactor/thread_pool.cc.o -c /home/hh/searchEngine/src/reactor/thread_pool.cc",
+  "file": "/home/hh/searchEngine/src/reactor/thread_pool.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/web/calculate.cc.o -c /home/hh/searchEngine/src/web/calculate.cc",
+  "file": "/home/hh/searchEngine/src/web/calculate.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/web/page_lib.cc.o -c /home/hh/searchEngine/src/web/page_lib.cc",
+  "file": "/home/hh/searchEngine/src/web/page_lib.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/web/page_lib_preprocessor.cc.o -c /home/hh/searchEngine/src/web/page_lib_preprocessor.cc",
+  "file": "/home/hh/searchEngine/src/web/page_lib_preprocessor.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/web/rss_parser.cc.o -c /home/hh/searchEngine/src/web/rss_parser.cc",
+  "file": "/home/hh/searchEngine/src/web/rss_parser.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/web/web_page.cc.o -c /home/hh/searchEngine/src/web/web_page.cc",
+  "file": "/home/hh/searchEngine/src/web/web_page.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/web/web_page_query.cc.o -c /home/hh/searchEngine/src/web/web_page_query.cc",
+  "file": "/home/hh/searchEngine/src/web/web_page_query.cc"
+},
+{
+  "directory": "/home/hh/searchEngine",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=gnu++17 -o CMakeFiles/client.dir/src/web/web_page_searcher.cc.o -c /home/hh/searchEngine/src/web/web_page_searcher.cc",
+  "file": "/home/hh/searchEngine/src/web/web_page_searcher.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dthirdparty_tinyxml2_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=gnu++17 -o CMakeFiles/thirdparty_tinyxml2.dir/__/third_party/tinyxml2/tinyxml2.cc.o -c /home/hh/searchEngine/third_party/tinyxml2/tinyxml2.cc",
+  "file": "/home/hh/searchEngine/third_party/tinyxml2/tinyxml2.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/cache/cache_manager.cc.o -c /home/hh/searchEngine/src/cache/cache_manager.cc",
+  "file": "/home/hh/searchEngine/src/cache/cache_manager.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/cache/lru_cache.cc.o -c /home/hh/searchEngine/src/cache/lru_cache.cc",
+  "file": "/home/hh/searchEngine/src/cache/lru_cache.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/cache/redis.cc.o -c /home/hh/searchEngine/src/cache/redis.cc",
+  "file": "/home/hh/searchEngine/src/cache/redis.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/common/configuration.cc.o -c /home/hh/searchEngine/src/common/configuration.cc",
+  "file": "/home/hh/searchEngine/src/common/configuration.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/common/dir_scanner.cc.o -c /home/hh/searchEngine/src/common/dir_scanner.cc",
+  "file": "/home/hh/searchEngine/src/common/dir_scanner.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/common/file.cc.o -c /home/hh/searchEngine/src/common/file.cc",
+  "file": "/home/hh/searchEngine/src/common/file.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/common/split_tool.cc.o -c /home/hh/searchEngine/src/common/split_tool.cc",
+  "file": "/home/hh/searchEngine/src/common/split_tool.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/key/dict_producer.cc.o -c /home/hh/searchEngine/src/key/dict_producer.cc",
+  "file": "/home/hh/searchEngine/src/key/dict_producer.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/key/dictionary.cc.o -c /home/hh/searchEngine/src/key/dictionary.cc",
+  "file": "/home/hh/searchEngine/src/key/dictionary.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/key/key_recommander.cc.o -c /home/hh/searchEngine/src/key/key_recommander.cc",
+  "file": "/home/hh/searchEngine/src/key/key_recommander.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/key/myTimer.cc.o -c /home/hh/searchEngine/src/key/myTimer.cc",
+  "file": "/home/hh/searchEngine/src/key/myTimer.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/reactor/acceptor.cc.o -c /home/hh/searchEngine/src/reactor/acceptor.cc",
+  "file": "/home/hh/searchEngine/src/reactor/acceptor.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/reactor/condition.cc.o -c /home/hh/searchEngine/src/reactor/condition.cc",
+  "file": "/home/hh/searchEngine/src/reactor/condition.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/reactor/event_loop.cc.o -c /home/hh/searchEngine/src/reactor/event_loop.cc",
+  "file": "/home/hh/searchEngine/src/reactor/event_loop.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/reactor/inet_address.cc.o -c /home/hh/searchEngine/src/reactor/inet_address.cc",
+  "file": "/home/hh/searchEngine/src/reactor/inet_address.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/reactor/mutex_lock.cc.o -c /home/hh/searchEngine/src/reactor/mutex_lock.cc",
+  "file": "/home/hh/searchEngine/src/reactor/mutex_lock.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/reactor/socket.cc.o -c /home/hh/searchEngine/src/reactor/socket.cc",
+  "file": "/home/hh/searchEngine/src/reactor/socket.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/reactor/socket_io.cc.o -c /home/hh/searchEngine/src/reactor/socket_io.cc",
+  "file": "/home/hh/searchEngine/src/reactor/socket_io.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/reactor/task_queue.cc.o -c /home/hh/searchEngine/src/reactor/task_queue.cc",
+  "file": "/home/hh/searchEngine/src/reactor/task_queue.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/reactor/tcp_connection.cc.o -c /home/hh/searchEngine/src/reactor/tcp_connection.cc",
+  "file": "/home/hh/searchEngine/src/reactor/tcp_connection.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/reactor/thread.cc.o -c /home/hh/searchEngine/src/reactor/thread.cc",
+  "file": "/home/hh/searchEngine/src/reactor/thread.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/reactor/thread_pool.cc.o -c /home/hh/searchEngine/src/reactor/thread_pool.cc",
+  "file": "/home/hh/searchEngine/src/reactor/thread_pool.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/web/calculate.cc.o -c /home/hh/searchEngine/src/web/calculate.cc",
+  "file": "/home/hh/searchEngine/src/web/calculate.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/web/page_lib.cc.o -c /home/hh/searchEngine/src/web/page_lib.cc",
+  "file": "/home/hh/searchEngine/src/web/page_lib.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/web/page_lib_preprocessor.cc.o -c /home/hh/searchEngine/src/web/page_lib_preprocessor.cc",
+  "file": "/home/hh/searchEngine/src/web/page_lib_preprocessor.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/web/rss_parser.cc.o -c /home/hh/searchEngine/src/web/rss_parser.cc",
+  "file": "/home/hh/searchEngine/src/web/rss_parser.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/web/web_page.cc.o -c /home/hh/searchEngine/src/web/web_page.cc",
+  "file": "/home/hh/searchEngine/src/web/web_page.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/web/web_page_query.cc.o -c /home/hh/searchEngine/src/web/web_page_query.cc",
+  "file": "/home/hh/searchEngine/src/web/web_page_query.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/src",
+  "command": "/usr/bin/c++ -Dhh_shared_EXPORTS -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -fPIC -std=c++17 -std=gnu++17 -o CMakeFiles/hh_shared.dir/web/web_page_searcher.cc.o -c /home/hh/searchEngine/src/web/web_page_searcher.cc",
+  "file": "/home/hh/searchEngine/src/web/web_page_searcher.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/test",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_CHRONO_DYN_LINK -DBOOST_LOCALE_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=c++17 -std=gnu++17 -o CMakeFiles/cache_test.dir/cache/cache_test.cc.o -c /home/hh/searchEngine/test/cache/cache_test.cc",
+  "file": "/home/hh/searchEngine/test/cache/cache_test.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/test",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_CHRONO_DYN_LINK -DBOOST_LOCALE_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=c++17 -std=gnu++17 -o CMakeFiles/configuration_test.dir/common/configuration_test.cc.o -c /home/hh/searchEngine/test/common/configuration_test.cc",
+  "file": "/home/hh/searchEngine/test/common/configuration_test.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/test",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_CHRONO_DYN_LINK -DBOOST_LOCALE_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=c++17 -std=gnu++17 -o CMakeFiles/split_tool_test.dir/common/split_tool_test.cc.o -c /home/hh/searchEngine/test/common/split_tool_test.cc",
+  "file": "/home/hh/searchEngine/test/common/split_tool_test.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/test",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_CHRONO_DYN_LINK -DBOOST_LOCALE_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=c++17 -std=gnu++17 -o CMakeFiles/jieba_test.dir/cppjieba_test/jieba_test.cc.o -c /home/hh/searchEngine/test/cppjieba_test/jieba_test.cc",
+  "file": "/home/hh/searchEngine/test/cppjieba_test/jieba_test.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/test",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_CHRONO_DYN_LINK -DBOOST_LOCALE_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=c++17 -std=gnu++17 -o CMakeFiles/conf_test.dir/key/conf_test.cc.o -c /home/hh/searchEngine/test/key/conf_test.cc",
+  "file": "/home/hh/searchEngine/test/key/conf_test.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/test",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_CHRONO_DYN_LINK -DBOOST_LOCALE_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=c++17 -std=gnu++17 -o CMakeFiles/dict_test.dir/key/dict_test.cc.o -c /home/hh/searchEngine/test/key/dict_test.cc",
+  "file": "/home/hh/searchEngine/test/key/dict_test.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/test",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_CHRONO_DYN_LINK -DBOOST_LOCALE_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=c++17 -std=gnu++17 -o CMakeFiles/key_test.dir/key/key_test.cc.o -c /home/hh/searchEngine/test/key/key_test.cc",
+  "file": "/home/hh/searchEngine/test/key/key_test.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/test",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_CHRONO_DYN_LINK -DBOOST_LOCALE_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=c++17 -std=gnu++17 -o CMakeFiles/simhash_test.dir/simhash/simhash_test.cc.o -c /home/hh/searchEngine/test/simhash/simhash_test.cc",
+  "file": "/home/hh/searchEngine/test/simhash/simhash_test.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/test",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_CHRONO_DYN_LINK -DBOOST_LOCALE_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=c++17 -std=gnu++17 -o CMakeFiles/page_lib_preprocessor_test.dir/web/page_lib_preprocessor_test.cc.o -c /home/hh/searchEngine/test/web/page_lib_preprocessor_test.cc",
+  "file": "/home/hh/searchEngine/test/web/page_lib_preprocessor_test.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/test",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_CHRONO_DYN_LINK -DBOOST_LOCALE_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=c++17 -std=gnu++17 -o CMakeFiles/page_lib_test.dir/web/page_lib_test.cc.o -c /home/hh/searchEngine/test/web/page_lib_test.cc",
+  "file": "/home/hh/searchEngine/test/web/page_lib_test.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/test",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_CHRONO_DYN_LINK -DBOOST_LOCALE_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=c++17 -std=gnu++17 -o CMakeFiles/rss_parser_test.dir/web/rss_parser_test.cc.o -c /home/hh/searchEngine/test/web/rss_parser_test.cc",
+  "file": "/home/hh/searchEngine/test/web/rss_parser_test.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/test",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_CHRONO_DYN_LINK -DBOOST_LOCALE_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=c++17 -std=gnu++17 -o CMakeFiles/web_page2_test.dir/web/web_page2_test.cc.o -c /home/hh/searchEngine/test/web/web_page2_test.cc",
+  "file": "/home/hh/searchEngine/test/web/web_page2_test.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/test",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_CHRONO_DYN_LINK -DBOOST_LOCALE_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=c++17 -std=gnu++17 -o CMakeFiles/web_page_query2_test.dir/web/web_page_query2_test.cc.o -c /home/hh/searchEngine/test/web/web_page_query2_test.cc",
+  "file": "/home/hh/searchEngine/test/web/web_page_query2_test.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/test",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_CHRONO_DYN_LINK -DBOOST_LOCALE_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=c++17 -std=gnu++17 -o CMakeFiles/web_page_query_test.dir/web/web_page_query_test.cc.o -c /home/hh/searchEngine/test/web/web_page_query_test.cc",
+  "file": "/home/hh/searchEngine/test/web/web_page_query_test.cc"
+},
+{
+  "directory": "/home/hh/searchEngine/test",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_CHRONO_DYN_LINK -DBOOST_LOCALE_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DSPDLOG_COMPILED_LIB -I/home/hh/searchEngine/third_party/doctest -I/home/hh/searchEngine/src/include -I/home/hh/searchEngine/test/include -I/home/hh/searchEngine/third_party -std=c++17 -std=gnu++17 -o CMakeFiles/web_page_test.dir/web/web_page_test.cc.o -c /home/hh/searchEngine/test/web/web_page_test.cc",
+  "file": "/home/hh/searchEngine/test/web/web_page_test.cc"
+}
+]

@@ -1,0 +1,4 @@
+configuration_test 0 0
+jieba_test 2 1.46892
+---
+configuration_test

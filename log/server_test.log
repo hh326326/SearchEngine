@@ -1,0 +1,82 @@
+[12/16/24:18:51:46 +08:00] [hh] [info] [thread 29501] 哈哈哈哈哈
+[12/16/24:19:54:45 +08:00] [hh] [error] [thread 35738] 我在Logger构造函数
+[12/16/24:19:54:45 +08:00] [hh] [info] [thread 35738] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/16/24:19:54:48 +08:00] [hh] [info] [thread 35738] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/16/24:20:10:56 +08:00] [hh] [error] [thread 37961] 我在Logger构造函数
+[12/16/24:20:10:56 +08:00] [hh] [info] [thread 37961] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/16/24:20:10:59 +08:00] [hh] [info] [thread 37961] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/16/24:20:14:45 +08:00] [hh] [error] [thread 38345] 我在Logger构造函数
+[12/16/24:20:14:45 +08:00] [hh] [info] [thread 38345] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/16/24:20:14:47 +08:00] [hh] [info] [thread 38345] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/16/24:20:22:38 +08:00] [hh] [error] [thread 38845] 我在Logger构造函数
+[12/16/24:20:22:38 +08:00] [hh] [info] [thread 38845] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/16/24:20:22:40 +08:00] [hh] [info] [thread 38845] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/16/24:20:35:34 +08:00] [hh] [error] [thread 41408] 我在Logger构造函数
+[12/16/24:20:35:34 +08:00] [hh] [info] [thread 41408] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/16/24:20:35:37 +08:00] [hh] [info] [thread 41408] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/16/24:20:40:11 +08:00] [hh] [error] [thread 42255] 我在Logger构造函数
+[12/16/24:20:40:11 +08:00] [hh] [info] [thread 42255] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/16/24:20:40:14 +08:00] [hh] [info] [thread 42255] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/16/24:20:47:53 +08:00] [hh] [error] [thread 42961] 我在Logger构造函数
+[12/16/24:20:47:53 +08:00] [hh] [info] [thread 42961] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/16/24:20:47:56 +08:00] [hh] [info] [thread 42961] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/16/24:20:56:44 +08:00] [hh] [error] [thread 43808] 我在Logger构造函数
+[12/16/24:20:56:44 +08:00] [hh] [info] [thread 43808] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/16/24:20:56:48 +08:00] [hh] [info] [thread 43808] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/16/24:21:05:54 +08:00] [hh] [error] [thread 44375] 我在Logger构造函数
+[12/16/24:21:05:54 +08:00] [hh] [info] [thread 44375] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/16/24:21:05:58 +08:00] [hh] [info] [thread 44375] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/16/24:21:11:20 +08:00] [hh] [error] [thread 45449] 我在Logger构造函数
+[12/16/24:21:11:20 +08:00] [hh] [info] [thread 45449] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/16/24:21:11:24 +08:00] [hh] [info] [thread 45449] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/16/24:21:16:12 +08:00] [hh] [error] [thread 45912] 我在Logger构造函数
+[12/16/24:21:16:12 +08:00] [hh] [info] [thread 45912] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/16/24:21:16:15 +08:00] [hh] [info] [thread 45912] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/16/24:21:24:32 +08:00] [hh] [error] [thread 47332] 我在Logger构造函数
+[12/16/24:21:24:32 +08:00] [hh] [info] [thread 47332] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/16/24:21:24:35 +08:00] [hh] [info] [thread 47332] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/16/24:21:52:41 +08:00] [hh] [error] [thread 49607] 我在Logger构造函数
+[12/16/24:21:52:41 +08:00] [hh] [info] [thread 49607] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/16/24:21:52:44 +08:00] [hh] [info] [thread 49607] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/16/24:21:55:05 +08:00] [hh] [error] [thread 50012] 我在Logger构造函数
+[12/16/24:21:55:05 +08:00] [hh] [info] [thread 50012] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/16/24:21:55:08 +08:00] [hh] [info] [thread 50012] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/16/24:22:01:39 +08:00] [hh] [error] [thread 50404] 我在Logger构造函数
+[12/16/24:22:01:39 +08:00] [hh] [info] [thread 50404] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/16/24:22:01:42 +08:00] [hh] [info] [thread 50404] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/16/24:22:05:37 +08:00] [hh] [error] [thread 51173] 我在Logger构造函数
+[12/16/24:22:05:37 +08:00] [hh] [info] [thread 51173] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/16/24:22:05:39 +08:00] [hh] [info] [thread 51173] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/17/24:09:20:56 +08:00] [hh] [error] [thread 5260] 我在Logger构造函数
+[12/17/24:09:20:56 +08:00] [hh] [info] [thread 5260] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/17/24:09:20:59 +08:00] [hh] [info] [thread 5260] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/17/24:09:36:39 +08:00] [hh] [error] [thread 6923] 我在Logger构造函数
+[12/17/24:09:36:39 +08:00] [hh] [info] [thread 6923] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/17/24:09:36:41 +08:00] [hh] [info] [thread 6923] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/17/24:09:43:34 +08:00] [hh] [error] [thread 8340] 我在Logger构造函数
+[12/17/24:09:43:34 +08:00] [hh] [info] [thread 8340] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/17/24:09:43:37 +08:00] [hh] [info] [thread 8340] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/17/24:09:52:41 +08:00] [hh] [error] [thread 10124] 我在Logger构造函数
+[12/17/24:09:52:41 +08:00] [hh] [info] [thread 10124] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/17/24:09:52:43 +08:00] [hh] [info] [thread 10124] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/17/24:09:59:32 +08:00] [hh] [error] [thread 11550] 我在Logger构造函数
+[12/17/24:09:59:32 +08:00] [hh] [info] [thread 11550] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/17/24:09:59:35 +08:00] [hh] [info] [thread 11550] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/17/24:10:20:39 +08:00] [hh] [error] [thread 14549] 我在Logger构造函数
+[12/17/24:10:20:39 +08:00] [hh] [info] [thread 14549] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/17/24:10:20:42 +08:00] [hh] [info] [thread 14549] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/17/24:10:33:22 +08:00] [hh] [error] [thread 17410] 我在Logger构造函数
+[12/17/24:10:33:22 +08:00] [hh] [info] [thread 17410] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/17/24:10:33:25 +08:00] [hh] [info] [thread 17410] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/17/24:11:25:23 +08:00] [hh] [error] [thread 18382] 我在Logger构造函数
+[12/17/24:11:25:23 +08:00] [hh] [info] [thread 18382] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/17/24:11:25:26 +08:00] [hh] [info] [thread 18382] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/17/24:11:40:14 +08:00] [hh] [error] [thread 21644] 我在Logger构造函数
+[12/17/24:11:40:14 +08:00] [hh] [info] [thread 21644] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/17/24:11:40:17 +08:00] [hh] [info] [thread 21644] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/17/24:12:07:35 +08:00] [hh] [error] [thread 23507] 我在Logger构造函数
+[12/17/24:12:07:35 +08:00] [hh] [info] [thread 23507] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/17/24:12:07:38 +08:00] [hh] [info] [thread 23507] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/17/24:12:10:59 +08:00] [hh] [error] [thread 24402] 我在Logger构造函数
+[12/17/24:12:10:59 +08:00] [hh] [info] [thread 24402] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
+[12/17/24:12:11:02 +08:00] [hh] [info] [thread 24402] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily

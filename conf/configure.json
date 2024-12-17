@@ -1,0 +1,36 @@
+{
+    "path" : 
+    {
+        "dir_art"       :   "/home/hh/searchEngine/data/raw_data/yuliao/art/",
+        "english"       :   "/home/hh/searchEngine/data/raw_data/yuliao/english.txt",
+        "stop_word_eng" :   "/home/hh/searchEngine/data/raw_data/yuliao/stop_words_eng.txt",
+        "stop_word_zh"  :   "/home/hh/searchEngine/data/raw_data/yuliao/stop_words_zh.txt",
+        "the_holy_bible":   "/home/hh/searchEngine/data/raw_data/yuliao/The_Holy_Bible.txt",
+        "dir_people"    :   "/home/hh/searchEngine/data/raw_data/yuliao/people_daily",
+    
+        "dict_eng"      :   "/home/hh/searchEngine/data/database/dict_en.dat",
+        "dict_zh"       :   "/home/hh/searchEngine/data/database/dict_zh.dat",
+        "index_eng"     :   "/home/hh/searchEngine/data/database/index_eng.dat",
+        "index_zh"      :   "/home/hh/searchEngine/data/database/index_zh.dat",
+        "offset"        :   "/home/hh/searchEngine/data/database/offset.dat",
+        "newoffset"     :   "/home/hh/searchEngine/data/database/new_offset_lib.dat",
+        "ripepage"      :   "/home/hh/searchEngine/data/database/ripepage.dat",
+        "newripepage"   :   "/home/hh/searchEngine/data/database/new_ripe_page.dat",
+        "invertindex"   :   "/home/hh/searchEngine/data/database/invertindex.dat",
+        
+        "hmm_model"     :   "/home/hh/searchEngine/data/dict/hmm_model.utf8",
+        "idf"           :   "/home/hh/searchEngine/data/dict/idf.utf8",
+        "jieba.dict"    :   "/home/hh/searchEngine/data/dict/jieba.dict.utf8",
+        "stop_words"    :   "/home/hh/searchEngine/data/dict/stop_words.utf8",
+        "user.dict"     :   "/home/hh/searchEngine/data/dict/user.dict.utf8",
+        "redis_key.init"    :   "tcp://127.0.0.1:6379/1",
+        "redis_web.init"    :   "tcp://127.0.0.1:6379/2",
+        "redis.ttl"     :   "3600",
+
+        "ip": "127.0.0.1",
+        "port": "8888",
+        "threadNum": "10",
+        "queSize": "10"
+
+    }
+}

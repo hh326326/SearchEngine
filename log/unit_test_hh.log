@@ -1,0 +1,21 @@
+[12/15/24:12:55:00 +08:00] [hh] [warning] [thread 18941] hello word
+[12/15/24:12:55:00 +08:00] [hh] [info] [thread 18941] [/home/hh/searchEngine/test/key/conf_test.cc:15:main] in main: done OK
+[12/15/24:13:09:44 +08:00] [hh] [info] [thread 19588] [/home/hh/searchEngine/test/key/dict_test.cc:12:main] in main 333 ok
+[12/15/24:13:09:49 +08:00] [hh] [error] [thread 19588] [/home/hh/searchEngine/src/key/dict_producer.cc:51:BuildEnDict] open /home/hh/searchEngine/data/raw_data/yuliao/english.txt fail.
+[12/15/24:13:09:49 +08:00] [hh] [error] [thread 19588] [/home/hh/searchEngine/src/key/dict_producer.cc:173:Store] open /home/hh/searchEngine/data/database/dict_en.dat or /home/hh/searchEngine/data/database/index_eng.dat fail.
+[12/15/24:13:09:51 +08:00] [hh] [error] [thread 19588] [/home/hh/searchEngine/src/key/dict_producer.cc:173:Store] open /home/hh/searchEngine/data/database/dict_zh.dat or /home/hh/searchEngine/data/database/index_zh.dat fail.
+[12/15/24:13:12:25 +08:00] [hh] [info] [thread 19904] [/home/hh/searchEngine/test/key/dict_test.cc:12:main] in main 333 ok
+[12/15/24:13:12:30 +08:00] [hh] [error] [thread 19904] [/home/hh/searchEngine/src/key/dict_producer.cc:51:BuildEnDict] open /home/hh/searchEngine/data/raw_data/yuliao/english.txt fail.
+[12/15/24:13:15:32 +08:00] [hh] [info] [thread 20090] [/home/hh/searchEngine/test/key/dict_test.cc:12:main] in main 333 ok
+[12/15/24:13:25:05 +08:00] [hh] [info] [thread 20534] [/home/hh/searchEngine/test/key/dict_test.cc:12:main] in main 333 ok
+[12/15/24:13:42:29 +08:00] [hh] [info] [thread 20810] [/home/hh/searchEngine/test/key/dict_test.cc:12:main] in main 333 ok
+[12/15/24:13:56:34 +08:00] [hh] [info] [thread 21190] [/home/hh/searchEngine/test/key/dict_test.cc:12:main] in main 333 ok
+[12/15/24:14:04:07 +08:00] [hh] [info] [thread 21328] [/home/hh/searchEngine/test/key/dict_test.cc:12:main] in main 333 ok
+[12/15/24:14:05:03 +08:00] [hh] [info] [thread 21459] [/home/hh/searchEngine/test/key/dict_test.cc:12:main] in main 333 ok
+[12/15/24:14:06:05 +08:00] [hh] [info] [thread 21667] [/home/hh/searchEngine/test/key/dict_test.cc:12:main] in main 333 ok
+[12/15/24:14:11:39 +08:00] [hh] [info] [thread 21970] [/home/hh/searchEngine/test/key/dict_test.cc:12:main] in main 333 ok
+[12/15/24:14:13:15 +08:00] [hh] [info] [thread 22242] [/home/hh/searchEngine/test/key/dict_test.cc:12:main] in main 333 ok
+[12/16/24:20:51:18 +08:00] [hh] [info] [thread 43393] [/home/hh/searchEngine/test/key/dict_test.cc:12:main] in main 333 ok
+[12/16/24:21:22:35 +08:00] [hh] [error] [thread 47299] 我在Logger构造函数
+[12/16/24:21:49:16 +08:00] [hh] [error] [thread 48873] 我在Logger构造函数
+[12/16/24:21:51:29 +08:00] [hh] [error] [thread 49480] 我在Logger构造函数
