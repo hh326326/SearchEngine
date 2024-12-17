@@ -1,3 +1,0 @@
-configuration_test 2 0.00939749
-jieba_test 8 0.32445
----
