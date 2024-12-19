@@ -33,7 +33,7 @@ using Type = enum class Language { ZH, ENG };
 
 class DictProducer {
 public:
-  explicit DictProducer(Logger &logger, IConfiguration &conf);
+  explicit DictProducer( IConfiguration &conf);
   void BuildEnDict();
   void BuildZhDict();
   void CreateIndex(Type type);
@@ -49,7 +49,6 @@ private:
   size_t GetIndex(string &word);
 
 private:
-  Logger &_logger;
   IConfiguration &_conf;
   SplitTool _st;
   std::vector<std::string> _file;

@@ -8,21 +8,22 @@
 
 #include "cache/redis.h"
 #include "key/dictionary.h"
+#include "key/key_query.h"
 #include "reactor/search_engine.h"
+#include <memory>
+#include <spdlog/logger.h>
+
 
 using namespace hh;
 
 int main() {
-  hh::Logger logger("/home/hh/searchEngine/log/server_test.log");
-  Configuration config("/home/hh/searchEngine/conf/configure.json", logger);
+  Configuration config("./conf/configure.json");
 
-  RedisCache cache(logger, config);
-  Dictionary dict(logger, config);
-  KeyRecommander keyRecom(dict);
-  PageLib pl(logger, config);
-  PageLibPreprocessor plp(pl, logger, config);
-  Setting setting(dict, keyRecom, pl, plp, cache);
+  hh::SettingManager manager(config);
+  hh::Setting setting = manager.createSetting();
+  auto logger = Logger::GetLogger();
+  logger->error("I am in main()");
 
-  WebServer server(10, 10, "127.0.0.1", 8888, logger, config, setting, cache);
+  WebServer server(atoi(config.GetConfig()["threadNum"].c_str()), atoi(config.GetConfig()["queSize"].c_str()), config.GetConfig()["ip"].c_str(), atoi(config.GetConfig()["port"].c_str()),  config, setting);
   server.Start();
 }

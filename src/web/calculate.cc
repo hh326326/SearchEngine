@@ -15,14 +15,14 @@ namespace hh {
 
 unordered_map<string, TF_IDF_Weight>
 CalculateValue(const unordered_map<string, uint64_t> &terms_frequency_map,
-               unordered_map<string, uint64_t> document_frequencies,
+               unordered_map<string, std::set<std::pair<DocId, TF_IDF_Weight>>>& invert_index_table,
                uint64_t total_docs_num) {
   unordered_map<string, TF_IDF_Weight> doc_weights;
   doc_weights.reserve(terms_frequency_map.size());
 
   for (const auto &pair : terms_frequency_map) {
     uint64_t term_frequency = pair.second;
-    uint64_t document_frequency = document_frequencies[pair.first];
+    uint64_t document_frequency = invert_index_table[pair.first].size();
     // term_frequency 单词在文档中出现的次数
     // document_frequency 单词在整个文档库中出现的次数
     double inverse_document_frequency = 0; //< IDF = log2(N / (DF + 1))

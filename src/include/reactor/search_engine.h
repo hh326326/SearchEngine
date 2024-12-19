@@ -8,85 +8,43 @@
 #ifndef __MODULEONESERVER_H__
 #define __MODULEONESERVER_H__
 
+#include "cache/cache_manager.h"
 #include "cache/redis.h"
 #include "common/configuration.h"
 #include "common/logger.h"
 #include "key/dict_producer.h"
 #include "key/dictionary.h"
+#include "key/key_query.h"
 #include "key/key_recommander.h"
 #include "key/myTimer.h"
 #include "reactor/tcp_server.h"
 #include "reactor/thread_pool.h"
 #include "web/web_page_searcher.h"
+#include <cstdlib>
 #include <iostream>
 #include <unistd.h>
+#include <utility>
+#include "cache/ProtocolParser.h"
+#include "reactor/settion_manager.h"
+
 
 namespace hh {
 using std::cout;
 using std::endl;
 using std::string;
 
-struct Setting {
-  Setting(Dictionary &dict, KeyRecommander &kr, PageLib &pl,
-          PageLibPreprocessor &plp, RedisCache &cache)
-      : _dict(dict), _key_recommander(kr), _plpage_lib(pl),
-        _page_lib_preprocessor(plp), cache(cache) {
-    _plpage_lib.Load();
-    _page_lib_preprocessor.CreatePageLibList();
-    _page_lib_preprocessor.RmRedundantPages();
-    _page_lib_preprocessor.Cut();
-    _page_lib_preprocessor.BuildInvertIndexTable();
-    _page_lib_preprocessor.LoadIndexPageList();
-  }
 
-  PageLib &_plpage_lib;
-  Dictionary &_dict;
-  KeyRecommander &_key_recommander;
-  PageLibPreprocessor &_page_lib_preprocessor;
-  RedisCache &cache;
-};
-
-class MyTask {
-public:
-  MyTask(string &msg, const TcpConnectionPtr &con,
-         KeyRecommander &key_recommander, RedisCache &cache, Logger &logger)
-      : _msg(std::move(msg)), _con(std::move(con)), _kr(key_recommander),
-        _logger(logger), _cache(cache) {}
-  //该函数在线程池中执行的
-  // void Process()
-  void Process() const {
-    // 关键词推荐
-    //在process函数中去进行真正的业务逻辑的处理
-
-    string result = _cache.DoQuery(_msg, 1);
-    LOG_INFO("{} key word query: {} in process", _con->GetPeerAddrString(),
-             _msg);
-    if (result.empty()) {
-      _kr.Query(_msg);
-      result.append((">>>>>\n")).append(_kr.GetString()).append("<<<<<\n\n");
-      _cache.AddData(_msg, result, 1);
-    }
-
-    _con->SendInLoop(result);
-  }
-
-private:
-  string _msg;
-  TcpConnectionPtr _con;
-  Logger &_logger;
-  KeyRecommander &_kr;
-  RedisCache &_cache;
-};
 
 class WebServer {
 public:
   WebServer(size_t threadNum, size_t queSize, const string &ip,
-            unsigned short port, Logger &logger, IConfiguration &config,
-            Setting &setting, RedisCache &cache)
-      : _pool(threadNum, queSize), _server(ip, port), _logger(logger),
-        _config(config), _settings(setting), _cache(cache) {}
+            unsigned short port, IConfiguration &config,
+            Setting &setting)
+      : _pool(threadNum, queSize), _server(ip, port),
+        _config(config), _settings(setting){}
 
   void Start() {
+    CacheManager::GetCacheManager();
     _pool.Start(); //计算线程全部启动
     // using namespace std::placeholders;
     // _server.setAllCallback(bind(&EchoServer::OnConnection, this, _1)
@@ -107,57 +65,61 @@ public:
   }
 
   /*static*/ void OnConnection(const TcpConnectionPtr &con) {
-    LOG_INFO("我在OnConnection()");
+    auto logger = Logger::GetLogger(); // 获取日志实例
+    logger->info("我在OnConnection()");
     cout << con->ToString() << " has connected!" << endl;
     string logmsg{con->ToString() + " has connected!"};
-    LOG_INFO("Connection message: {}", logmsg);
+    logger->info("Connection message: {}", logmsg);
   }
 
   void OnMessage(const TcpConnectionPtr &con) {
+    auto logger = Logger::GetLogger(); // 获取日志实例
     //回显
-    LOG_INFO("我在Onmessage()");
+    logger->info("我在Onmessage()");
     string msg = con->Receive();
-    msg.erase(msg.size() - 1, 1);
+    msg.pop_back();
     cout << "recv msg  " << msg << endl;
     {
       // 服务器显示的信息
     }
     //接收与发送之间，消息msg是没有做任何处理的 by lili
-    char type = msg[0];
-    msg = msg.substr(2);
-    cout << "new mesg = " << msg << '\n';
-    if (type == '1') {
-      // 关键词推荐
-      MyTask task(msg, con, _settings._key_recommander, _cache, _logger);
-      _pool.AddTask(std::bind(&MyTask::Process, task));
-    } else {
-      // 网页查询
-      WebPageSearcher task(msg, con, _settings._page_lib_preprocessor, _logger,
-                           _config, _settings.cache);
+    json recv_json = ProtocolParser::DoParse(msg);
+    json send_json;
+    cout << "recv_json[\"cmd\"]"
+         << (int)(recv_json["cmd"]) << '\n';
+    cout << "recv_json[\"key\"]" << recv_json["key"] << '\n';
+
+    if ((int)(recv_json["cmd"] == KeyRecommand)){
+            KeyRecommander task(recv_json["key"], con, _settings._key_query );
+      _pool.AddTask([task] {task.Process();});
+    }
+    else if ((int)(recv_json["cmd"] == WebPageSearch)) {
+      WebPageSearcher task(recv_json["key"], con, 
+                           _config);
       _pool.AddTask(
           [task] { task.Process(); }); //?QUES: 为什么要把`Process()`设置成const
-    }
+      }
+  }
 
-    /* gThreadPool->addTask(std::bind(&MyTask::process, &task)); */
+
     // _pool.AddTask(std::bind(&MyTask::Process, task));
     // _pool.AddTask(
     //     [task] { task.Process(); });  //?QUES:
     //     为什么要把`Process()`设置成const
-  }
+
 
   /*static*/ void OnClose(const TcpConnectionPtr &con) {
+    auto logger = Logger::GetLogger();
     cout << con->ToString() << " has closed!" << endl;
     string logmsg{con->ToString() + " has closed!"};
-    LOG_INFO("Close message: {}", logmsg);
+    logger->error("Close message: {}", logmsg);
   }
 
 private:
   ThreadPool _pool;
   TcpServer _server;
-  Logger &_logger;
   IConfiguration &_config;
   Setting &_settings;
-  RedisCache &_cache;
 };
 }; // namespace hh
 

@@ -7,15 +7,22 @@
  */
 
 #include "reactor/thread.h"
+#include <cstddef>
 #include <cstdio>
+#include <pthread.h>
+
 
 namespace hh {
-Thread::Thread(ThreadCallback &&cb)
-    : _cb(std::move(cb)), _thid(0), _is_running(false) {}
+
+__thread const char* name = nullptr;
+
+Thread::Thread(ThreadCallback &&cb, const std::string& name)
+    : _cb(std::move(cb)), _thid(0), _is_running(false) , _name(name){}
 
 Thread::~Thread() {
   if (_is_running) {
     int ret = pthread_detach(_thid);
+    _is_running = false;
     // TODO(seven): error handle
     if (ret) {
     }
@@ -42,6 +49,7 @@ int Thread::Join() {
     ret = pthread_join(_thid, nullptr);
     // TODO(seven): error handle
     _is_running = false;
+    // delete name;
   }
   return ret;
 }
@@ -49,6 +57,7 @@ int Thread::Join() {
 void *Thread::ThreadFunc(void *arg) {
   // Thread *pth = static_cast<Thread *>(arg);
   auto *pth = static_cast<Thread *>(arg);
+  hh::name = pth->_name.c_str();
   if (pth) {
     pth->_cb(); //回调函数
   }

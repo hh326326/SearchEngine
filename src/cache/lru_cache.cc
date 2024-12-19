@@ -8,96 +8,124 @@
 
 #include "cache/lru_cache.h"
 
+#include <fstream>
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <utility>
 
 namespace hh {
-LruCache::LruCache(int cache_size) : _cache_size(cache_size) {}
 
-void LruCache::ReadFromFile(const string &file) {
-  // 匹配失败的?
+LRUCache::LRUCache(int capacity) : _capacity(capacity), _isUpdating(false) {}
+
+LRUCache::LRUCache(const LRUCache &cache) : _capacity(cache._capacity) {
+  Update(cache);
 }
 
-void LruCache::AddRecord(const string &key, const string &result) {
+// 查找_resultList中有无key值，若有，传出value
+bool LRUCache::Get(string key, json &value) {
   auto it = _hash_map.find(key);
-  if (it != _hash_map.end()) {
-    // 在缓存中
-    // list移动元素, hashmap修改iterator
+  if (it == _hash_map.end()) {
+    return false;
+  }
+  _result_list.splice(_result_list.begin(), _result_list, it->second);
+  _pending_update_list.remove(*(it->second));
+  _pending_update_list.push_front(
+      std::move(std::make_pair(it->second->first, it->second->second)));
+  value = it->second->second;
 
-    // 1. 移动并更新hash map
-    MoveToFront(key);
-    // 2. 更新value
-    _result_list.begin()->second = result;
-  } else {
-    // 不在缓存中
-    // if (full)
-    // delete
-    // add to list
-    // add to pendinglist
+  return true;
+}
 
-    if (_result_list.size() == _cache_size) {
-      // delete rear
-      DeleteRear();
+// 将 key-value放入缓存中
+void LRUCache::Put(string key, json &value) {
+  auto it = _hash_map.find(key);
+  if (it == _hash_map.end()) {
+    if (_hash_map.size() >= _capacity) {
+      _hash_map.erase(_result_list.back().first);
+      _result_list.pop_back();
     }
-    // add
-    AddFront(key, result);
+    _result_list.push_front(std::move(std::make_pair(key, value)));
+    _hash_map[key] = _result_list.begin();
 
-    // pending list
-    AddToPending(key, result);
+    _pending_update_list.push_front(std::move(std::make_pair(key, value)));
+  } else {
+    _result_list.splice(_result_list.begin(), _result_list, it->second);
   }
 }
 
-void LruCache::Update(const LruCache &) {}
-
-void LruCache::WriteToFile(const string &file) {}
-
-void LruCache::LruTest() {
-  for (auto &elem : _result_list) {
-    std::cout << elem.first << " " << elem.second << '\n';
+void LRUCache::WriteToFile(string filename) {
+  std::ofstream ofs(filename);
+  if (!ofs.good()) {
+    std::cerr << "error: " << filename << '\n';
   }
-  std::cout << '\n';
-  for (auto &elem : _hash_map) {
-    std::cout << elem.first << " " << elem.second->first << '\n';
+  for (auto &it : GetResultList()) {
+    ofs << it.first << " " << it.second << '\n';
   }
-  std::cout << "\n\n\n";
+  ofs.close();
 }
 
-// add front with hashmap update
-void LruCache::AddFront(const string &key, const string &value) {
-  // add item to list
-  _result_list.emplace_front(std::make_pair(key, value));
-  // update hash map
-  _hash_map.emplace(key, _result_list.begin());
-}
-
-void LruCache::DeleteRear() {
-  // get key of rear item
-  string key = _result_list.back().first;
-  // delete from list
-  _result_list.pop_back();
-  // delete from hash with key
-  _hash_map.erase(key);
-}
-
-void LruCache::MoveToFront(const string &key) {
-  // get iterator
-  auto it = _hash_map[key];
-  // save content
-  pair<string, string> tmp = *it;
-  // delete from list
-  _result_list.erase(it);
-  // add to front
-  _result_list.emplace_front(tmp);
-  // update hash
-  _hash_map[key] = _result_list.begin();
-}
-
-void LruCache::AddToPending(const string &key, const string &value) {
-  if (_pending_update_list.size() == _cache_size) {
-    _pending_update_list.pop_back();
+void LRUCache::WriteToFile(string filename, string key, json value) {
+  std::ofstream ofs(filename, std::ios::app);
+  if (!ofs.good()) {
+    std::cerr << "error: " << filename << '\n';
   }
-  _pending_update_list.emplace_front(std::make_pair(key, value));
+  ofs << key << " " << value << '\n';
+  ofs.close();
 }
+
+void LRUCache::ReadFromFile(string filename) {
+  std::ifstream ifs(filename);
+  if (!ifs.good()) {
+    std::cerr << "error: " << filename << '\n';
+  }
+  string line;
+  while (std::getline(ifs, line)) {
+    std::istringstream iss(line);
+    string key;
+    json value;
+    iss >> key;
+    iss >> value;
+    Put(key, value);
+  }
+  ifs.close();
+}
+
+void LRUCache::Update(const LRUCache &cache) {
+  _isUpdating = true;
+  int count = 0;
+  auto it = cache._pending_update_list.rbegin();
+  for (int distance = _pending_update_list.size() - _result_list.size();
+       distance > 0; --distance) {
+    ++it;
+  }
+  for (; (it != cache._pending_update_list.rend()); ++it) {
+    json j = it->second;
+    Put(it->first, j);
+    ++count;
+    if (count >= _capacity) {
+      _isUpdating = false;
+      return;
+    }
+  }
+  _isUpdating = false;
+}
+
+void LRUCache::show() {
+  for (auto it = _result_list.begin(); it != _result_list.end(); ++it) {
+    std::cout << "key: " << it->first << " ";
+    std::cout << "value: ";
+    for (auto i : it->second) {
+      std::cout << i << " ";
+    }
+    std::cout << '\n';
+  }
+}
+
+list<pair<string, json>> &LRUCache::GetPendingUpdateList() {
+  return _pending_update_list;
+}
+
+list<pair<string, json>> &LRUCache::GetResultList() { return _result_list; }
 
 } // namespace hh

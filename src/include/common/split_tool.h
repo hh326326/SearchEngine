@@ -28,7 +28,7 @@ using std::vector;
 
 class SplitTool {
 public:
-  explicit SplitTool(Logger &logger, IConfiguration &config);
+  explicit SplitTool(IConfiguration &config);
   void Cut(const string &str, vector<string> &wordsVec, bool flag);
   void Cut(const string &str, unordered_map<string, uint64_t> &wordsMap,
            bool flag);
@@ -37,7 +37,6 @@ private:
   void ReadStopWord(set<string> &stopword, const string &stopwordPath);
 
 private:
-  Logger &_logger;
   IConfiguration &_config;
   cppjieba::MixSegment _seg;
   cppjieba::Jieba _jieba;

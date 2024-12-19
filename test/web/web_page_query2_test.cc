@@ -5,7 +5,7 @@
 
 namespace t2x {
 using namespace hh; // NOLINT
-hh::Logger logger("/home/hh/searchEngine/log/unit_test_2x_4.log");
+auto logger = Logger::GetLogger("/home/hh/searchEngine/log/unit_test_2x_4.log");
 
 TEST_CASE("test caculateCosSimilarity") {
   SUBCASE("test1") {
@@ -55,7 +55,7 @@ TEST_CASE("test GetPagesOrder") {
   vecs.emplace_back(1, map1);
   vector<DocId> result = WebPageQuery::GetPagesOrder(map1, vecs);
   for (const auto &doc : result) {
-    logger.Info("{}", doc);
+    logger->info("{}", doc);
   }
 }
 } // namespace t2x

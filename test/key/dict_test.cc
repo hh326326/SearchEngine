@@ -4,12 +4,12 @@
 
 using namespace hh; // NOLINT
 int main() {
-  hh::Logger logger("/home/hh/searchEngine/log/unit_test_hh.log");
-  hh::Configuration config("/home/hh/searchEngine/conf/configure.json", logger);
+  auto logger = hh::Logger::GetLogger("./log/unit_test_hh.log");
+  hh::Configuration config("./conf/configure.json");
 
   std::cout << config.GetConfig()["dir_art"] << std::endl;
-  logger.Info(LOG_PREFIX("in main 333 {}"), "ok");
-  DictProducer dp(logger, config);
+  logger->info(LOG_PREFIX("in main 333 {}"), "ok");
+  DictProducer dp(config);
 
   dp.BuildEnDict();
   dp.CreateIndex(Type::ENG);

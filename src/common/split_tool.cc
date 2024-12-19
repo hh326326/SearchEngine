@@ -13,8 +13,8 @@
 
 namespace hh {
 
-SplitTool::SplitTool(Logger &logger, IConfiguration &config)
-    : _logger(logger), _config(config),
+SplitTool::SplitTool(IConfiguration &config)
+    :  _config(config),
       _seg(_config.GetConfig()["jieba.dict"], _config.GetConfig()["hmm_model"]),
       _jieba(_config.GetConfig()["jieba.dict"],
              _config.GetConfig()["hmm_model"], _config.GetConfig()["user.dict"],
@@ -73,9 +73,10 @@ void SplitTool::Cut(const string &str,
  */
 void SplitTool::ReadStopWord(set<string> &stopword,
                              const string &stopwordPath) {
+  auto logger = Logger::GetLogger();
   ifstream ifs(stopwordPath);
   if (!ifs) {
-    LOG_ERROR("open {} fail.", stopwordPath);
+    logger->error("open {} fail.", stopwordPath);
     return;
   }
   string line;

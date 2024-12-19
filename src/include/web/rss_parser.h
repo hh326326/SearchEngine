@@ -26,12 +26,14 @@ using tinyxml2::XMLElement;
 
 class RssParser {
 public:
-  explicit RssParser(Logger &logger);
+  explicit RssParser();
   void Load(XMLDocument &doc);
   vector<RssItem> &GetRssItems();
 
   static string FormatText(string s) {
-    RE2::GlobalReplace(&s, "<[^>]*>", " ");
+    // RE2::GlobalReplace(&s, "<[^>]*>", " ");
+    RE2::GlobalReplace(&s, "( |　|&nbsp;|[\r]|[\n]|<[^>]+>|showPlayer[(]+[^)]+[)];)", " ");
+    
     return s;
   }
 
@@ -41,7 +43,6 @@ public:
 private:
   vector<RssItem> _rss;
   // vector<WebPage> _page_lib;
-  [[maybe_unused]] Logger &_logger;
 };
 
 int LoadXML(const string &filename, XMLDocument &doc);

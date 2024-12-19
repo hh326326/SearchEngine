@@ -30,12 +30,13 @@ using std::istringstream;
 using std::ostream;
 using std::string;
 
-DictProducer::DictProducer(Logger &logger, IConfiguration &conf)
-    : _logger(logger), _conf(conf), _st(_logger, _conf) {
+DictProducer::DictProducer( IConfiguration &conf)
+    : _conf(conf), _st(_conf) {
   _dict.reserve(100);
 }
 
 void DictProducer::BuildEnDict() {
+  auto logger = Logger::GetLogger();
   if (!_dict.empty()) {
     _dict.clear();
   }
@@ -49,7 +50,7 @@ void DictProducer::BuildEnDict() {
   const string path = _conf.GetConfig()["english"];
   ifstream ifs(path);
   if (!ifs) {
-    LOG_ERROR("open {} fail.", path);
+    logger->error("open {} fail.", path);
   }
   string line;
   while (getline(ifs, line)) {
@@ -75,6 +76,7 @@ void DictProducer::BuildEnDict() {
   }
 }
 void DictProducer::BuildZhDict() {
+  auto logger = Logger::GetLogger();
   if (!_dict.empty()) {
     _dict.clear();
   }
@@ -93,7 +95,7 @@ void DictProducer::BuildZhDict() {
     filename = string(path).append(filename);
     ifstream ifs(filename);
     if (!ifs) {
-      LOG_ERROR("open {} fail.", filename);
+      logger->error("open {} fail.", filename);
       return;
     }
     string line;
@@ -149,6 +151,7 @@ void DictProducer::CreateIndex(Type type) {
   }
 }
 int DictProducer::Store(Type type) {
+  auto logger = Logger::GetLogger();
   std::ofstream ofs_dict;
   std::ofstream ofs_index;
   string dictfile;
@@ -176,7 +179,7 @@ int DictProducer::Store(Type type) {
       ofs_index << "\n";
     }
   } else {
-    LOG_ERROR("open {} or {} fail.", dictfile, indexfile);
+    logger->error("open {} or {} fail.", dictfile, indexfile);
     return -1;
   }
   return 0;
@@ -185,11 +188,12 @@ int DictProducer::Store(Type type) {
 // TODO(seven): consider refactor->common/dirsanner
 // TODO(seven): consider refactor->common/dirsanner
 void DictProducer::GetFileNames(vector<string> &vec, string &path) {
+  auto logger = Logger::GetLogger();
   // 使用 opendir 函数打开指定路径的目录，并获取 DIR 指针
   DIR *ptr_dir = opendir(path.c_str());
   if (ptr_dir == nullptr) {
     // 如果目录无法打开，打印错误日志并返回
-    LOG_ERROR("open directory: {} fail.", path);
+    logger->error("open directory: {} fail.", path);
     return;
   }
 
@@ -219,10 +223,11 @@ void DictProducer::GetFileNames(vector<string> &vec, string &path) {
 // TODO(seven): consider refactor->common/configuration
 void DictProducer::ReadStopWord(set<string> &stopword,
                                 const string &stopwordpath) {
+  auto logger = Logger::GetLogger();
   // 读取停用词
   ifstream ifs(stopwordpath);
   if (!ifs) {
-    LOG_ERROR("open {} fail.", stopwordpath);
+    logger->error("open {} fail.", stopwordpath);
     return;
   }
   string line;

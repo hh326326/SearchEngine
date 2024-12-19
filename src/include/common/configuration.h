@@ -37,7 +37,7 @@ public:
 
 class Configuration : public IConfiguration {
 public:
-  explicit Configuration(string file_path, Logger &logger);
+  explicit Configuration(string file_path);
   ~Configuration() override = default;
   Configuration(const Configuration &) = delete;
   Configuration &operator=(const Configuration &) = delete;
@@ -59,7 +59,6 @@ private:
   set<string> _stop_word_eng_list;
   set<string> _stop_word_zh_list;
   string _file_path;
-  Logger &_logger;
 };
 
 } // namespace hh

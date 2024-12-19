@@ -7,9 +7,13 @@
  */
 
 #include "web/rss_parser.h"
+#include <regex>
 
 namespace hh {
-RssParser::RssParser(Logger &logger) : _logger(logger) { _rss.reserve(1000); }
+
+RssParser::RssParser() {
+  _rss.reserve(1000); 
+}
 
 void RssParser::Load(XMLDocument &doc) {
   XMLElement *channel =
@@ -19,9 +23,33 @@ void RssParser::Load(XMLDocument &doc) {
     while (item) {
       _rss.emplace_back();
 
+      // std::string title = item->FirstChildElement("title")->GetText();
+      // std::string url = item->FirstChildElement("link")->GetText();
+      // std::string auther = item->FirstChildElement("author")->GetText();
+      // std::string content =
+      //     item->FirstChildElement("content")
+      //         ? item->FirstChildElement("content")->GetText()
+      //     : item->FirstChildElement("description")
+      //         ? item->FirstChildElement("description")->GetText()
+      //         : "";
+      std::regex reg("( |　|&nbsp;|[\r]|[\n]|<[^>]+>|showPlayer[(]+[^)]+[)];)");
+      // title = std::regex_replace(title, reg, "");
+      // content = std::regex_replace(content, reg, "");
+      // if (!title.empty()) {
+      //   _rss.back().title = title;
+      // }
+      // if (!url.empty()) {
+      //   _rss.back().link = url;
+      // }
+      // if (!auther.empty()) {
+      //   _rss.back().author = auther;
+      // }
+      // if (!content.empty()) {
+      //   _rss.back().description = content;
+      // }
       XMLElement *title = item->FirstChildElement("title");
       if (title != nullptr) {
-        _rss.back().title = title->GetText();
+        _rss.back().title = std::regex_replace(title->GetText(), reg, "");
       }
 
       XMLElement *link = item->FirstChildElement("link");
@@ -36,7 +64,8 @@ void RssParser::Load(XMLDocument &doc) {
 
       XMLElement *description = item->FirstChildElement("description");
       if (description != nullptr) {
-        _rss.back().description = FormatText(description->GetText());
+        _rss.back().description = std::regex_replace(description->GetText(), reg, "");;
+        // _rss.back().description = FormatText(description->GetText());
       }
 
       // Next item
@@ -49,26 +78,13 @@ vector<RssItem> &RssParser::GetRssItems() { return _rss; }
 
 // FOR DEBUG
 void RssParser::Output(const string &filename) {
+  auto logger = Logger::GetLogger();
   std::ofstream ofs(filename);
-  LOG_INFO("{}", filename);
+  logger->info("{}", filename);
   if (ofs.is_open()) {
-    LOG_INFO("open success\n");
+    logger->info("open success\n");
     size_t docid = 0;
     for (const auto &item : _rss) {
-      // fmt::print(ofs, "<doc>\n");
-      // fmt::print(ofs, "\t<docid>{}</docid>\n", ++docid);
-      // fmt::print(ofs, "\t<title>{}</title>\n", item.title);
-      // fmt::print(ofs, "\t<link>{}</link>\n", item.link);
-      // fmt::print(ofs, "\t<author>{}</author>\n", item.author);
-      // fmt::print(ofs, "\t<description>{}</description>\n", item.description);
-      // fmt::print(ofs, "</doc>\n");
-      // ofs << "<doc>\n";
-      // ofs << "\t<docid>" << ++docid << "</docid>\n";
-      // ofs << "\t<title>" << item.title << "</title>\n";
-      // ofs << "\t<link>" << item.link << "</link>\n";
-      // ofs << "\t<author>" << item.author << "</author>\n";
-      // ofs << "\t<description>" << item.description << "</description>\n";
-      // ofs << "</doc>\n";
       ofs << "<doc>";
       ofs << "<docid>" << ++docid << "</docid>";
       ofs << "<title>" << item.title << "</title>";
@@ -78,7 +94,7 @@ void RssParser::Output(const string &filename) {
       ofs << "</doc>\n";
     }
   } else {
-    LOG_ERROR("open failed\n");
+    logger->info("open failed\n");
   }
 }
 

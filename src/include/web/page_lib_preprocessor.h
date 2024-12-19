@@ -20,7 +20,7 @@ namespace hh {
 
 class PageLibPreprocessor {
 public:
-  PageLibPreprocessor(PageLib &page_lib, Logger &logger,
+  PageLibPreprocessor(PageLib &page_lib, 
                       IConfiguration &config);
   void Do();
   // 创建PageLibList后销毁PageLib对象  --->shared_ptr
@@ -37,7 +37,6 @@ public:
   // TODO(hh) tmp use
   void LoadIndexPageList();
 
-  Logger &_logger;
   IConfiguration &_config;
   PageLib &_page_lib;
   vector<WebPage> _page_lib_list;
@@ -50,6 +49,7 @@ public:
   unordered_map<string, set<pair<DocId, TF_IDF_Weight>>> _invert_index_table;
 };
 
-#endif // PAGE_LIB_PREPROCESSOR_H
 
 } // namespace hh
+
+#endif // PAGE_LIB_PREPROCESSOR_H

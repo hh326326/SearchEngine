@@ -39,12 +39,6 @@
       .append(msg)                                                             \
       .c_str()
 
-// 这些宏允许通过 _logger 对象记录不同级别的日志。它们会调用 Logger 类中的
-// Error、Warn、Info 和 Debug 方法来处理不同级别的日志消息。
-#define LOG_ERROR(msg, ...) _logger.Error(LOG_PREFIX(msg), ##__VA_ARGS__)
-#define LOG_WARN(msg, ...) _logger.Warn(LOG_PREFIX(msg), ##__VA_ARGS__)
-#define LOG_INFO(msg, ...) _logger.Info(LOG_PREFIX(msg), ##__VA_ARGS__)
-#define LOG_DEBUG(msg, ...) _logger.Debug(LOG_PREFIX(msg), ##__VA_ARGS__)
 
 #pragma clang diagnostic pop
 
@@ -61,52 +55,30 @@ using std::string;
 //如果初始化失败，会捕获 spdlog::spdlog_ex 异常并输出错误信息，然后退出程序。
 class Logger {
 public:
-  explicit Logger(const std::string &filename) {
-    try {
-      spdlog::set_pattern("[%D:%H:%M:%S %z] [%n] [%l] [thread %t] %v");
-      _logger = spdlog::basic_logger_mt("hh", filename);
-      // std::cout << "Logger()" << '\n';
-      _logger->error("我在Logger构造函数");
-    } catch (const spdlog::spdlog_ex &ex) {
-      std::cerr << "Log init failed: " << ex.what() << '\n';
-      exit(1);
-    }
+  static std::shared_ptr<spdlog::logger>
+  GetLogger(const std::string &filename = "./log/server_test.log") {
+    std::lock_guard<std::mutex> lock(m_mutex); // 确保线程安全
+    if (!_logger) {
+            try {
+                spdlog::set_pattern("[%Y-%m-%d %H:%M:%S] [%n] [%l] [thread %t] %v");
+                _logger = spdlog::basic_logger_mt("logger", filename); // 创建日志记录器
+                _logger->set_level(spdlog::level::info);  // 设置日志级别
+            } catch (const spdlog::spdlog_ex &ex) {
+                std::cerr << "Log init failed: " << ex.what() << '\n';
+                exit(1);  // 初始化失败时终止程序
+            }
+        }
+        return _logger;
   }
 
-  //宏（LOG_ERROR, LOG_INFO 等）
-  //用来简化日志调用，自动为你生成日志前缀，并将日志传递给模板函数。
-  //模板函数（Info, Debug, Warn, Error）
-  //是具体的日志记录实现，负责将格式化后的消息传递给 spdlog 库进行输出。
-
-  template <typename... Args> void Info(const std::string &msg, Args... args) {
-    _logger->info(msg, args...);
-  }
-
-  template <typename... Args> void Debug(const std::string &msg, Args... args) {
-    _logger->debug(msg, args...);
-  }
-
-  template <typename... Args> void Warn(const std::string &msg, Args... args) {
-    _logger->warn(msg, args...);
-  }
-
-  template <typename... Args> void Error(const std::string &msg, Args... args) {
-    _logger->error(msg, args...);
-  }
-
-  //该方法用于设置日志记录的级别，spdlog 支持多种日志级别（例如：trace, debug,
-  //info, warn, error 等）。通过调用 SetLogLevel
-  //方法，可以动态设置日志的记录级别，控制输出的日志的详细程度。
-  void SetLogLevel(spdlog::level::level_enum level) {
-    _logger->set_level(level);
-  }
-
-  std::shared_ptr<spdlog::logger> getLogger() const { return _logger; }
 
 private:
-  std::shared_ptr<spdlog::logger> _logger;
+  static std::shared_ptr<spdlog::logger> _logger;
+      static std::mutex m_mutex;  // 用于线程同步
 };
 
 } // namespace hh
+
+
 
 #endif // LOGGEr_H

@@ -7,8 +7,7 @@
 
 namespace t23 {
 using namespace hh; // NOLINT
-hh::Logger logger("/home/hh/searchEngine/log/unit_test_22.log");
-Configuration config("/home/hh/searchEngine/conf/configure.json", logger);
+Configuration config("/home/hh/searchEngine/conf/configure.json");
 Simhasher simhasher(config.GetConfig()["jieba.dict"],
                     config.GetConfig()["hmm_model"], config.GetConfig()["idf"],
                     config.GetConfig()["stop_words"]);
@@ -19,10 +18,10 @@ TEST_CASE("test stl basic") {
 }
 
 TEST_CASE("test  basic") {
-  PageLib page_lib(logger, config);
+  PageLib page_lib( config);
   page_lib.Load();
   REQUIRE(page_lib.GetRipePages().size() > 0);
-  PageLibPreprocessor page_lib_preprocessor(page_lib, logger, config);
+  PageLibPreprocessor page_lib_preprocessor(page_lib, config);
 }
 
 TEST_CASE("test page_test") {

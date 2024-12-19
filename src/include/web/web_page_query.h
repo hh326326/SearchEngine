@@ -19,20 +19,28 @@
 #include <map>
 #include <string>
 #include <unordered_map>
+#include <utility>
 #include <vector>
 
 namespace hh {
 using Cosine = double;
 using DocsVector = vector<pair<DocId, unordered_map<string, TF_IDF_Weight>>>;
 
+struct SendInfo {
+  string title;
+  string abstracts;
+  string link;
+  string author;
+};
+
 class WebPageQuery {
 public:
-  WebPageQuery(const PageLibPreprocessor &pre, Logger &logger,
+  WebPageQuery(
                IConfiguration &config);
   // 加载库文件
   void LoadLibrary();
   // 返回查询结果
-  string DoQuery(const string &);
+  vector<string> DoQuery(const string &);
   // 通过TF-IDF算法算出每个关键词的权重系数
   unordered_map<string, TF_IDF_Weight>
   CalculateQueryWeights(const unordered_map<string, uint64_t> &query_words);
@@ -52,16 +60,20 @@ public:
   GetPagesOrder(const unordered_map<string, TF_IDF_Weight> &,
                 const DocsVector &);
   // 封装相关网址的标题和摘要信息为一个Json字符串
-  string CreateJson(vector<DocId> &doc_ids);
-  static string NoAnswer();
+  vector<string> CreateJson(vector<DocId> &doc_ids);
+  vector<string> NoAnswer();
   unordered_map<string, uint64_t> Cut(const string &sought);
 
 public:
-  Logger &_logger;
   IConfiguration &_config;
-  const PageLibPreprocessor &_pre;
 
+  // 网页偏移库
+  unordered_map<DocId, pair<uint64_t, uint64_t>> _offset_lib;
+  // 倒排索引库
+  unordered_map<string, set<pair<DocId, TF_IDF_Weight>> > _invert_index_table;
+  unordered_map<DocId, SendInfo> _index_page_lib_list;
 private:
+  
   SplitTool _spilt_tool;
 };
 } // namespace hh

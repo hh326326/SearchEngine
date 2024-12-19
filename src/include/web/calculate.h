@@ -14,21 +14,24 @@
 #include <string>
 #include <unordered_map>
 #include <vector>
+#include <utility>
+#include <set>
 
 namespace hh {
 using std::string;
 using std::unordered_map;
 using TF_IDF_Weight = double;
+using DocId = uint64_t;
 
 //
 // 计算一篇文档中所有单词TF_IDF的值
 // terms_frequency_map
-// document_frequency 包含该单词的文档数量
+// invert_index_table 倒排索引表
 // total_docs_num 总文档数量
 
 unordered_map<string, TF_IDF_Weight>
 CalculateValue(const unordered_map<string, uint64_t> &terms_frequency_map,
-               unordered_map<string, uint64_t> document_frequency,
+              unordered_map<string, std::set<std::pair<DocId, TF_IDF_Weight>>>& invert_index_table,
                uint64_t total_docs_num);
 
 } // namespace hh

@@ -31,7 +31,7 @@ using std::vector;
 
 class Dictionary {
 public:
-  Dictionary(Logger &logger,
+  Dictionary(
              IConfiguration
                  &config) noexcept; // noexcept 声明构造函数 不会抛出任何异常
   unordered_map<int, int> DoQuery(const string &key);
@@ -48,7 +48,6 @@ private:
   int ReadIndex();
 
 private:
-  Logger &_logger;
   IConfiguration &_config;
   vector<pair<string, int>> _dict_en;        // 读取英文词典
   vector<pair<string, int>> _dict_zh;        // 读取中文词典

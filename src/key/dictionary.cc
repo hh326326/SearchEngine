@@ -17,8 +17,8 @@
 
 namespace hh {
 
-Dictionary::Dictionary(Logger &logger, IConfiguration &config) noexcept
-    : _logger(logger), _config(config) {
+Dictionary::Dictionary( IConfiguration &config) noexcept
+    :  _config(config) {
   // std::cout << "读取词典，索引文件" << '\n';
   ReadDict();  // 读取词典文件
   ReadIndex(); // 读取索引文件
@@ -67,13 +67,14 @@ unordered_map<string, set<int>> &Dictionary::GetEnIndex() { return _index_en; }
 unordered_map<string, set<int>> &Dictionary::GetZhIndex() { return _index_zh; }
 
 int Dictionary::ReadDict() {
+  auto logger = Logger::GetLogger();
   vector<string> fileNameVec = {_config.GetConfig()["dict_eng"],
                                 _config.GetConfig()["dict_zh"]};
 
   for (const auto &filename : fileNameVec) {
     ifstream ifs(filename);
     if (!ifs) {
-      LOG_ERROR("open {} fail.", filename);
+      logger->error("open {} fail.", filename);
       return -1;
     }
     string line;
@@ -98,12 +99,13 @@ int Dictionary::ReadDict() {
 }
 
 int Dictionary::ReadIndex() {
+  auto logger = Logger::GetLogger();
   vector<string> fileNameVec = {_config.GetConfig()["index_eng"],
                                 _config.GetConfig()["index_zh"]};
   for (const auto &filename : fileNameVec) {
     ifstream ifs(filename);
     if (!ifs) {
-      LOG_ERROR("open {} fail.", filename);
+      logger->error("open {} fail.", filename);
       return -1;
     }
     // std::cout << "ReadIndex()" << '\n';

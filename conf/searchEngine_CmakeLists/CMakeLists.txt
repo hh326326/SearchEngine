@@ -135,33 +135,21 @@ message(STATUS "THIRD_PARTY_INCLUDE_DIR: ${THIRD_PARTY_INCLUDE_DIR}")
 file(GLOB_RECURSE SRC_SOURCES ${PROJECT_SOURCE_DIR}/src/*.cc)
 
 list(REMOVE_ITEM SRC_SOURCES
-  ${PROJECT_SOURCE_DIR}/src/server/keyCommander.cc
   ${PROJECT_SOURCE_DIR}/src/server/searchEngine.cc
-  ${PROJECT_SOURCE_DIR}/src/server/webEngine.cc
   ${PROJECT_SOURCE_DIR}/src/client/client.cc)
 
 # 添加 searchEngine.cpp 作为可执行文件的源文件
-add_executable(webEngine ${PROJECT_SOURCE_DIR}/src/server/webEngine.cc ${SRC_SOURCES})
-add_executable(keyCommander ${PROJECT_SOURCE_DIR}/src/server/keyCommander.cc ${SRC_SOURCES})
 add_executable(searchEngine ${PROJECT_SOURCE_DIR}/src/server/searchEngine.cc ${SRC_SOURCES})
 add_executable(client ${PROJECT_SOURCE_DIR}/src/client/client.cc ${SRC_SOURCES})
 # message(STATUS "PROJECT_SOURCE_DIR: ${PROJECT_SOURCE_DIR}")
 # 链接 hh_shared 库以及第三方库
-target_link_libraries(webEngine PRIVATE hh_shared spdlog::spdlog Threads::Threads)
-target_link_libraries(keyCommander PRIVATE hh_shared spdlog::spdlog Threads::Threads)
 target_link_libraries(searchEngine PRIVATE hh_shared spdlog::spdlog Threads::Threads)
 target_link_libraries(client PRIVATE hh_shared spdlog::spdlog Threads::Threads)
 # 设置输出目录
-set_target_properties(webEngine PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-    # 设置输出目录
-set_target_properties(keyCommander PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-  # 设置输出目录
 set_target_properties(searchEngine PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+    RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 set_target_properties(client PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+    RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 
 message(STATUS "SRC_SOURCES: ${SRC_SOURCES}")
 

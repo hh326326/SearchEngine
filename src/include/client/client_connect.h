@@ -12,6 +12,7 @@
 #include "reactor/inet_address.h"
 #include "reactor/socket.h"
 #include "reactor/socket_io.h"
+#include "cache/ProtocolParser.h"
 
 #include <string>
 #include <unistd.h>

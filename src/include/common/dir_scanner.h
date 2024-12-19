@@ -25,7 +25,7 @@ using std::vector;
 
 class DirScanner {
 public:
-  explicit DirScanner(Logger &logger, IConfiguration &config);
+  explicit DirScanner( IConfiguration &config);
   // 调用Traverse()函数, 扫描指定目录下的所有文件
   void operator()();
   vector<string> &GetFilesPath();
@@ -34,7 +34,6 @@ public:
 
 private:
   vector<string> _file_path_list; // 存放每个语料文件的绝对路径
-  Logger &_logger;
   IConfiguration &_config;
 };
 

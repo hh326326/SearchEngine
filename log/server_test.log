@@ -80,3 +80,55 @@
 [12/17/24:12:10:59 +08:00] [hh] [error] [thread 24402] 我在Logger构造函数
 [12/17/24:12:10:59 +08:00] [hh] [info] [thread 24402] [/home/hh/searchEngine/src/cache/redis.cc:23:RedisCache] Redis cache connected
 [12/17/24:12:11:02 +08:00] [hh] [info] [thread 24402] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/17/24:19:57:55 +08:00] [hh] [error] [thread 15644] 我在Logger构造函数
+[12/17/24:19:57:55 +08:00] [hh] [info] [thread 15644] [/home/hh/searchEngine/src/cache/redis.cc:24:RedisCache] Redis cache connected
+[12/17/24:19:57:58 +08:00] [hh] [info] [thread 15644] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/17/24:19:59:10 +08:00] [hh] [info] [thread 15644] [/home/hh/searchEngine/src/include/reactor/search_engine.h:110:OnConnection] 我在OnConnection()
+[12/17/24:19:59:10 +08:00] [hh] [info] [thread 15644] [/home/hh/searchEngine/src/include/reactor/search_engine.h:113:OnConnection] Connection message: 127.0.0.1:8888---->127.0.0.1:42866 has connected!
+[12/17/24:19:59:20 +08:00] [hh] [info] [thread 15644] [/home/hh/searchEngine/src/include/reactor/search_engine.h:118:OnMessage] 我在Onmessage()
+[12/17/24:19:59:20 +08:00] [hh] [info] [thread 15662] [/home/hh/searchEngine/src/include/web/web_page_searcher.h:31:Process] 127.0.0.1:42866 search sought: 哈哈
+[12/17/24:19:59:20 +08:00] [hh] [info] [thread 15662] [/home/hh/searchEngine/src/cache/redis.cc:38:DoQuery] Query key:"哈哈" Cache missed.
+[12/17/24:19:59:27 +08:00] [hh] [info] [thread 15662] [/home/hh/searchEngine/src/cache/redis.cc:45:AddData] New data added to cache. key:"哈哈"
+[12/17/24:19:59:36 +08:00] [hh] [info] [thread 15644] [/home/hh/searchEngine/src/include/reactor/search_engine.h:118:OnMessage] 我在Onmessage()
+[12/17/24:19:59:36 +08:00] [hh] [info] [thread 15663] [/home/hh/searchEngine/src/include/web/web_page_searcher.h:31:Process] 127.0.0.1:42866 search sought: 白菜
+[12/17/24:19:59:36 +08:00] [hh] [info] [thread 15663] [/home/hh/searchEngine/src/cache/redis.cc:38:DoQuery] Query key:"白菜" Cache missed.
+[12/17/24:19:59:44 +08:00] [hh] [info] [thread 15663] [/home/hh/searchEngine/src/cache/redis.cc:45:AddData] New data added to cache. key:"白菜"
+[12/17/24:20:00:26 +08:00] [hh] [info] [thread 15644] [/home/hh/searchEngine/src/include/reactor/search_engine.h:118:OnMessage] 我在Onmessage()
+[12/17/24:20:00:26 +08:00] [hh] [info] [thread 15664] [/home/hh/searchEngine/src/include/web/web_page_searcher.h:31:Process] 127.0.0.1:42866 search sought: 中国移动通信集团公司
+[12/17/24:20:00:26 +08:00] [hh] [info] [thread 15664] [/home/hh/searchEngine/src/cache/redis.cc:38:DoQuery] Query key:"中国移动通信集团公司" Cache missed.
+[12/17/24:20:00:34 +08:00] [hh] [info] [thread 15664] [/home/hh/searchEngine/src/cache/redis.cc:45:AddData] New data added to cache. key:"中国移动通信集团公司"
+[12/17/24:20:00:41 +08:00] [hh] [info] [thread 15644] [/home/hh/searchEngine/src/include/reactor/search_engine.h:118:OnMessage] 我在Onmessage()
+[12/17/24:20:00:41 +08:00] [hh] [info] [thread 15665] [/home/hh/searchEngine/src/include/web/web_page_searcher.h:31:Process] 127.0.0.1:42866 search sought: 原油生产平稳
+[12/17/24:20:00:41 +08:00] [hh] [info] [thread 15665] [/home/hh/searchEngine/src/cache/redis.cc:38:DoQuery] Query key:"原油生产平稳" Cache missed.
+[12/17/24:20:00:49 +08:00] [hh] [info] [thread 15665] [/home/hh/searchEngine/src/cache/redis.cc:45:AddData] New data added to cache. key:"原油生产平稳"
+[12/17/24:20:01:52 +08:00] [hh] [info] [thread 15644] [/home/hh/searchEngine/src/include/reactor/search_engine.h:118:OnMessage] 我在Onmessage()
+[12/17/24:20:01:52 +08:00] [hh] [info] [thread 15666] [/home/hh/searchEngine/src/cache/redis.cc:38:DoQuery] Query key:"我爱你" Cache missed.
+[12/17/24:20:01:52 +08:00] [hh] [info] [thread 15666] [/home/hh/searchEngine/src/include/reactor/search_engine.h:62:Process] 127.0.0.1:42866 key word query: 我爱你 in process
+[12/17/24:20:01:52 +08:00] [hh] [info] [thread 15666] [/home/hh/searchEngine/src/cache/redis.cc:45:AddData] New data added to cache. key:"我爱你"
+[12/17/24:20:02:01 +08:00] [hh] [info] [thread 15644] [/home/hh/searchEngine/src/include/reactor/search_engine.h:118:OnMessage] 我在Onmessage()
+[12/17/24:20:02:01 +08:00] [hh] [info] [thread 15667] [/home/hh/searchEngine/src/cache/redis.cc:38:Do[12/18/24:18:03:27 +08:00] [hh] [error] [thread 27598] 我在Logger构造函数
+[12/18/24:18:03:27 +08:00] [hh] [info] [thread 27598] [/home/hh/searchEngine/src/cache/redis.cc:24:RedisCache] Redis cache connected
+[12/18/24:18:03:30 +08:00] [hh] [info] [thread 27598] [/home/hh/searchEngine/src/common/dir_scanner.cc:21:operator()] /home/hh/searchEngine/data/raw_data/yuliao/people_daily
+[12/18/24:18:04:38 +08:00] [hh] [info] [thread 27598] [/home/hh/searchEngine/src/include/reactor/search_engine.h:85:OnConnection] 我在OnConnection()
+[12/18/24:18:04:38 +08:00] [hh] [info] [thread 27598] [/home/hh/searchEngine/src/include/reactor/search_engine.h:88:OnConnection] Connection message: 127.0.0.1:8888---->127.0.0.1:42530 has connected!
+[12/18/24:18:04:45 +08:00] [hh] [info] [thread 27598] [/home/hh/searchEngine/src/include/reactor/search_engine.h:93:OnMessage] 我在Onmessage()
+[12/18/24:18:04:45 +08:00] [hh] [info] [thread 27624] [/home/hh/searchEngine/src/include/web/web_page_searcher.h:38:Process] 127.0.0.1:42530 search sought: 土豆
+[12/18/24:18:05:43 +08:00] [hh] [info] [thread 27598] [/home/hh/searchEngine/src/include/reactor/search_engine.h:93:OnMessage] 我在Onmessage()
+[12/18/24:18:05:43 +08:00] [hh] [info] [thread 27625] [/home/hh/searchEngine/src/include/web/web_page_searcher.h:38:Process] 127.0.0.1:42530 search sought: 土豆
+[12/18/24:18:05:59 +08:00] [hh] [info] [thread 27598] [/home/hh/searchEngine/src/include/reactor/search_engine.h:93:OnMessage] 我在Onmessage()
+[12/18/24:18:05:59 +08:00] [hh] [info] [thread 27626] [/home/hh/searchEngine/src/include/web/web_page_searcher.h:38:Process] 127.0.0.1:42530 search sought: 白菜
+[12/18/24:18:06:35 +08:00] [hh] [info] [thread 27598] [/home/hh/searchEngine/src/include/reactor/search_engine.h:93:OnMessage] 我在Onmessage()
+[12/18/24:18:06:35 +08:00] [hh] [info] [thread 27627] [/home/hh/searchEngine/src/include/web/web_page_searcher.h:38:Process] 127.0.0.1:42530 search sought: 土豆
+[12/18/24:18:06:55 +08:00] [hh] [info] [thread 27598] [/home/hh/searchEngine/src/include/reactor/search_engine.h:93:OnMessage] 我在Onmessage()
+[12/18/24:18:06:55 +08:00] [hh] [info] [thread 27628] [/home/hh/searchEngine/src/include/web/web_page_searcher.h:38:Process] 127.0.0.1:42530 search sought: 中国石油发展外贸
+[12/18/24:18:07:18 +08:00] [hh] [info] [thread 27598] [/home/hh/searchEngine/src/include/reactor/search_engine.h:93:OnMessage] 我在Onmessage()
+[12/18/24:18:07:18 +08:00] [hh] [info] [thread 27629] [/home/hh/searchEngine/src/include/web/web_page_searcher.h:38:Process] 127.0.0.1:42530 search sought: 中国移动公司
+[12/18/24:18:08:17 +08:00] [hh] [info] [thread 27598] [/home/hh/searchEngine/src/include/reactor/search_engine.h:93:OnMessage] 我在Onmessage()
+[12/18/24:18:08:17 +08:00] [hh] [info] [thread 27630] [/home/hh/searchEngine/src/include/web/web_page_searcher.h:38:Process] 127.0.0.1:42530 search sought: 中国移动通信集团公司
+[12/18/24:18:08:34 +08:00] [hh] [info] [thread 27598] [/home/hh/searchEngine/src/include/reactor/search_engine.h:93:OnMessage] 我在Onmessage()
+[12/18/24:18:08:34 +08:00] [hh] [info] [thread 27631] [/home/hh/searchEngine/src/include/web/web_page_searcher.h:38:Process] 127.0.0.1:42530 search sought: 原油生产平稳
+[12/18/24:18:09:43 +08:00] [hh] [info] [thread 27598] [/home/hh/searchEngine/src/include/reactor/search_engine.h:85:OnConnection] 我在OnConnection()
+[12/18/24:18:09:43 +08:00] [hh] [info] [thread 27598] [/home/hh/searchEngine/src/include/reactor/search_engine.h:88:OnConnection] Connection message: 127.0.0.1:8888---->127.0.0.1:58846 has connected!
+[12/18/24:18:10:11 +08:00] [hh] [info] [thread 27598] [/home/hh/searchEngine/src/include/reactor/search_engine.h:93:OnMessage] 我在Onmessage()
+[12/18/24:18:10:11 +08:00] [hh] [info] [thread 27632] [/home/hh/searchEngine/src/include/web/web_page_searcher.h:38:Process] 127.0.0.1:58846 search sought: 原油生产平稳
+[12/18/24:18:11:16 +08:00] [hh] [info] [thread 27598] [/home/hh/searchEngine/src/include/reactor/search_engine.h:129:OnClose] Close message: 127.0.0.1:8888--[12/19/24:17:47:35 +08:00] [hh] [error] [thread 38940] 我在Logger构造函数

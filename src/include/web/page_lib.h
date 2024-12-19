@@ -30,7 +30,7 @@ using std::unordered_map;
 // 及以上版本。它向编译器和其他程序员传达一个重要的信息：函数的返回值不应该被忽略。
 class PageLib {
 public:
-  PageLib(Logger &logger, IConfiguration &config);
+  PageLib(IConfiguration &config);
   // 从文件中加载网页库
   void Load();
   // 获取网页库中的网页数量
@@ -42,7 +42,7 @@ public:
   void StoreOnDisk();
 
   // private:
-  Logger &_logger;
+
   IConfiguration &_config;
   DirScanner _dir_scanner;
   // 解析单个rss文件

@@ -11,6 +11,7 @@
 #include <cstdint>
 #include <fstream>
 #include <ios>
+#include <string>
 #include <utility>
 
 namespace hh {
@@ -18,9 +19,9 @@ using std::ios;
 using std::make_pair;
 using std::ofstream;
 
-PageLib::PageLib(Logger &logger, IConfiguration &config)
-    : _logger(logger), _config(config), _dir_scanner(_logger, _config),
-      _rss_parser(_logger),
+PageLib::PageLib( IConfiguration &config)
+    :  _config(config), _dir_scanner( _config),
+      _rss_parser(),
       _simhasher(_config.GetConfig()["jieba.dict"],
                  _config.GetConfig()["hmm_model"], _config.GetConfig()["idf"],
                  _config.GetConfig()["stop_words"]) {
@@ -56,6 +57,7 @@ void PageLib::Load() {
     page.append(rss_item.description);
     page.append("</description>");
     page.append("</doc>");
+    // std::cout << page << '\n';
     _ripe_pages.emplace_back(page);
   }
 }
@@ -71,7 +73,7 @@ Simhasher &PageLib::GetSimhaser() { return _simhasher; }
 // 离线存储网页库 'ripe_page.dat'和位置偏移库offset_lib.dat'
 void PageLib::StoreOnDisk() {
   // 离线存储网页库
-  ofstream ofs("/home/hh/searchEngine/data/database/ripe_page.dat",
+  ofstream ofs(_config.GetConfig()["ripepage"],
                ios::binary);
 
   for (const string &page : _ripe_pages) {
@@ -79,20 +81,23 @@ void PageLib::StoreOnDisk() {
   }
   ofs.close();
   // 存储位置偏移库
-  ofstream ofs_offset("/home/hh/searchEngine/data/database/offset_lib.dat",
-                      ios::binary);
+  ofstream ofs_offset(_config.GetConfig()["offset"]
+                      );
 
   uint64_t doc_id = 1;
   uint64_t offset = 0;
   uint64_t doc_size = 0;
   for (const string &page : _ripe_pages) {
-    ofs_offset.write(reinterpret_cast<const char *>(&doc_id), sizeof(uint64_t));
-    ofs_offset.write(reinterpret_cast<const char *>(&offset), sizeof(uint64_t));
+    // ofs_offset.write(reinterpret_cast<const char *>(&doc_id),
+    // sizeof(uint64_t)); ofs_offset.write(reinterpret_cast<const char
+    // *>(&offset), sizeof(uint64_t));
+    ofs_offset << doc_id << " " << std::to_string(offset) << " ";
     offset += page.size();
 
     doc_size = _ripe_pages[doc_id - 1].size();
-    ofs_offset.write(reinterpret_cast<const char *>(&doc_size),
-                     sizeof(uint64_t));
+    // ofs_offset.write(reinterpret_cast<const char *>(&doc_size),
+    //  sizeof(uint64_t));
+    ofs_offset << std::to_string(doc_size) << '\n';
     ++doc_id;
     _offset_lib.insert(make_pair(doc_id, make_pair(offset, doc_size)));
   }

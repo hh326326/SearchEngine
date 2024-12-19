@@ -2,7 +2,7 @@
 #include "common/logger.h"
 #include "key/dict_producer.h"
 #include "key/dictionary.h"
-#include "key/key_recommander.h"
+#include "key/key_query.h"
 #include "key/myTimer.h"
 
 #include <string>
@@ -13,39 +13,38 @@ int main() {
   hh::MyTimer mytimer(1);
   mytimer.start();
 
-  hh::Logger logger("/home/hh/searchEngine/log/unit_test_hh.log");
-  hh::Configuration config("/home/hh/searchEngine/conf/configure.json", logger);
+  hh::Configuration config("./conf/configure.json");
 
   mytimer.stop();
   mytimer.printTime();
 
   mytimer.start();
-  hh::Dictionary dict(logger, config);
+  hh::Dictionary dict(config);
   mytimer.stop();
   mytimer.printTime();
 
   mytimer.start();
-  hh::KeyRecommander kr(dict);
-  // kr.Query("hello");
-  // kr.Print();
+  hh::KeyQuery kq(dict);
+  // kq.Query("hello");
+  // kq.Print();
 
-  // kr.Query("apple凑合");
-  // kr.Print();
+  // kq.Query("apple凑合");
+  // kq.Print();
 
-  // kr.Query("凑合");
-  // kr.Print();
+  // kq.Query("凑合");
+  // kq.Print();
 
-  kr.Query("你好");
-  kr.Print();
+  kq.Query("你好");
+  kq.Print();
 
-  kr.Query("whh");
-  kr.Print();
+  kq.Query("whh");
+  kq.Print();
 
-  // kr.Query("你好apple");
-  // kr.Print();
+  // kq.Query("你好apple");
+  // kq.Print();
 
-  // kr.Query("凑合apple");
-  // kr.Print();
+  // kq.Query("凑合apple");
+  // kq.Print();
 
   mytimer.stop();
   mytimer.printTime();
@@ -63,9 +62,9 @@ int main() {
 
 //     hh::Dictionary dict(config, logger);
 
-//     hh::KeyRecommander kr("apple", dict);
+//     hh::KeyRecommander kq("apple", dict);
 
-//     kr.Query();
-//     kr.Print();
+//     kq.Query();
+//     kq.Print();
 //     return 0;
 // }

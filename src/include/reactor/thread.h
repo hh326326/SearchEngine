@@ -10,15 +10,18 @@
 
 #include <functional>
 #include <pthread.h>
+#include <string>
 
 namespace hh {
+
+extern __thread const char* name;
 using std::function;
 
 using ThreadCallback = function<void()>;
 
 class Thread {
 public:
-  explicit Thread(ThreadCallback &&cb);
+  explicit Thread(ThreadCallback &&cb, const std::string& name);
   ~Thread();
   int Start();
   int Join();
@@ -27,10 +30,12 @@ private:
   //线程入口函数
   static void *ThreadFunc(void *arg);
 
+private:
+    //要去实现的任务
   ThreadCallback _cb; // sizeof(function<void()>) = 32
   pthread_t _thid;    // sizeof(pthread_t) = 8
   bool _is_running;
-  //要去实现的任务
+  std::string _name;
 };
 } // namespace hh
 

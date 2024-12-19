@@ -13,6 +13,7 @@
 #include <cstddef>
 #include <cstdint>
 #include <fstream>
+#include <string>
 #include <utility>
 
 namespace hh {
@@ -20,9 +21,9 @@ using std::ios;
 using std::make_pair;
 using std::ofstream;
 
-PageLibPreprocessor::PageLibPreprocessor(PageLib &page_lib, Logger &logger,
+PageLibPreprocessor::PageLibPreprocessor(PageLib &page_lib,
                                          IConfiguration &config)
-    : _page_lib(page_lib), _logger(logger), _config(config) {}
+    : _page_lib(page_lib),  _config(config) {}
 
 void PageLibPreprocessor::Do() {
   CreatePageLibList();
@@ -53,7 +54,7 @@ void PageLibPreprocessor::CreatePageLibList() {
 }
 
 void PageLibPreprocessor::Cut() {
-  SplitTool split_tool(_logger, _config);
+  SplitTool split_tool( _config);
   for (auto &page : _page_lib_list) {
     split_tool.Cut(page._rss_item.description, page._term_frequencies, true);
     for (const auto &pair : page._term_frequencies) {
@@ -121,31 +122,55 @@ void PageLibPreprocessor::BuildInvertIndexTable() {
 // 将预处理后的网页库和网页偏移库存储到磁盘上
 void PageLibPreprocessor::StoreOnDisk() {
   // 存储网页库，目标文件夹必须存在
-  ofstream ofs("/home/hh/searchEngine/data/database/new_ripe_page.dat",
+  ofstream ofs(_config.GetConfig()["newripepage"],
                ios::binary);
   for (const auto &page : _page_lib_list) {
     ofs.write(page._doc.c_str(), static_cast<int64_t>(page._doc.size()));
   }
   ofs.close();
+  ofstream ofs_send(_config.GetConfig()["ripe_page_send"],
+               ios::binary);
+  for (const auto &page : _page_lib_list) {
+    ofs_send << page._doc_id << '\n'
+            << page._rss_item.title << '\n'
+            << page._doc_abstract << '\n'
+            << page._rss_item.link
+            << '\n'
+        << page._rss_item.author << '\n';
+  }
+  ofs_send.close();
   // 存储位置偏移库
-  ofstream ofs_offset("/home/hh/searchEngine/data/database/new_offset_lib.dat",
-                      ios::binary);
+  ofstream ofs_offset(
+      _config.GetConfig()["newoffset"]);
   uint64_t offset = 0;
   uint64_t doc_size = 0;
   for (const auto &page : _page_lib_list) {
     uint64_t doc_id = page._doc_id;
-    ofs_offset.write(reinterpret_cast<const char *>(&doc_id), sizeof(uint64_t));
-    ofs_offset.write(reinterpret_cast<const char *>(&offset), sizeof(uint64_t));
-    offset += page._doc.size();
+    // ofs_offset.write(reinterpret_cast<const char *>(&doc_id), sizeof(uint64_t));
+    // ofs_offset.write(reinterpret_cast<const char *>(&offset), sizeof(uint64_t));
+    // offset += page._doc.size();
 
     doc_size = _page_lib_list[doc_id]._doc.size();
-    ofs_offset.write(reinterpret_cast<const char *>(&doc_size),
-                     sizeof(uint64_t));
+    // ofs_offset.write(reinterpret_cast<const char *>(&doc_size),
+    //                  sizeof(uint64_t));
+    ofs_offset << doc_id << " " << std::to_string(offset) << " " << std::to_string(doc_size) << '\n'; 
     ++doc_id;
     // TODO(hh): consider one more function
     _offset_lib.insert(make_pair(doc_id, make_pair(offset, doc_size)));
   }
   ofs_offset.close();
+
+  // 存储倒排索引
+  ofstream ofs_invert_index(
+      _config.GetConfig()["invertindex"]);
+  for (auto &line : _invert_index_table) {
+    ofs_invert_index << line.first;
+    for (auto &pair : line.second) {
+      ofs_invert_index << " " << pair.first << " " << pair.second;
+    }
+    ofs_invert_index << "\n";
+  }
+  ofs_invert_index.close();
 }
 
 // 使用simHash计算出网页描述的simhash值和关键词序列

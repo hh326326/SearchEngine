@@ -7,14 +7,18 @@
  */
 
 #include "reactor/thread_pool.h"
+#include "cache/timerManager.h"
+#include "reactor/thread.h"
 #include <chrono>
+#include <string>
 #include <thread>
 #include <unistd.h>
+#include <utility>
 
 namespace hh {
 ThreadPool::ThreadPool(size_t thread_num, size_t queue_size)
     : _task_queue(queue_size), _thread_num(thread_num),
-      // _queue_size(queue_size),
+       _queue_size(queue_size),
       _isExit(false) {
   _threads.reserve(_thread_num);
 }
@@ -32,10 +36,15 @@ void ThreadPool::Start() {
     /* unique_ptr<Thread> up(new WorkThread(*this)); */
     //    unique_ptr<Thread> up(new Thread(std::bind(&ThreadPool::threadFunc,
     //    this))) ;
-    unique_ptr<Thread> up(new Thread([this] { ThreadFunc(); }));
+    // unique_ptr<Thread> up(new Thread([this] { ThreadFunc(); }));
+    unique_ptr<Thread> up(new Thread(std::bind(&ThreadPool::ThreadFunc, this),
+                                     std::to_string(idx)));
     _threads.push_back(std::move(up));
   }
-
+  unique_ptr<Thread> up(new Thread(
+      std::bind(&TimerManager::Start, TimerManager::GetTimerManager()),
+      std::to_string(0)));
+  _threads.push_back(std::move(up));
   for (auto &th : _threads) {
     th->Start(); //创建工作线程的id，将工作线程开始运行
   }

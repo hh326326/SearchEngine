@@ -35,7 +35,7 @@ private:
   TaskQueue _task_queue; // sizeof(TaskQueue) = 248
   vector<unique_ptr<Thread>> _threads;
   size_t _thread_num;
-  // size_t _queue_size; // used
+  size_t _queue_size; // used
   bool _isExit;
 };
 } // namespace hh

@@ -7,8 +7,7 @@
 
 namespace t26 {
 using namespace hh; // NOLINT
-hh::Logger logger("/home/hh/searchEngine/log/unit_test_22.log");
-Configuration config("/home/hh/searchEngine/conf/configure.json", logger);
+Configuration config("/home/hh/searchEngine/conf/configure.json");
 
 TEST_CASE("test stl basic") {
   string test = "日前，一些网约车平台相继推出措施，优化老年人打车服务。1月22";

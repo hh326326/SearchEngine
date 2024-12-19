@@ -3,11 +3,14 @@
  * @brief   :
  * @author  :hh
  * @version :V1.0.0
- * @date    :2024-12-16
+ * @date    :2024-12-123
  */
 
 #ifndef __LRU_CACHE_H__
 #define __LRU_CACHE_H__
+
+#include "nlohmann/json.hpp"
+#include "nlohmann/json_fwd.hpp"
 
 #include <list>
 #include <string>
@@ -15,34 +18,39 @@
 #include <utility>
 
 namespace hh {
+using nlohmann::json;
 using std::list;
 using std::pair;
 using std::string;
 using std::unordered_map;
 
-class LruCache {
+class LRUCache {
 public:
-  explicit LruCache(int cache_size = 100);
-  void ReadFromFile(const string &file);
-  void AddRecord(const string &key, const string &result);
-  void Update(const LruCache &);
-  void WriteToFile(const string &file);
+  explicit LRUCache(int capacity = 100);
+  LRUCache(const LRUCache &cache);
 
-  void LruTest();
+  bool Get(string key, json &value);
+  void Put(string key, json &value);
+
+  void WriteToFile(string filename);
+  void WriteToFile(string filename, string key, json value);
+
+  void ReadFromFile(string filename);
+
+  void Update(const LRUCache &);
+
+  void show();
+
+  list<pair<string, json>> &GetPendingUpdateList();
+  list<pair<string, json>> &GetResultList();
 
 private:
-  void AddFront(const string &key, const string &value);
-  void DeleteRear();
-  void MoveToFront(const string &key);
-  void AddToPending(const string &key, const string &value);
-
-private:
-  list<pair<string, string>> _result_list;
-  unordered_map<string, list<pair<string, string>>::iterator> _hash_map;
-  unordered_map<int, list<pair<string, string>>::iterator> _freq_map;
-  list<pair<string, string>> _pending_update_list;
-  int _cache_size;
-  int _min_freq;
+  unordered_map<string, list<pair<string, json>>::iterator>
+      _hash_map;                                 // 使用hashTable进行查找
+  list<pair<string, json>> _result_list;         // 保存键值对
+  list<pair<string, json>> _pending_update_list; // 等待更新的节点信息
+  int _capacity;
+  bool _isUpdating;
 };
 
 } // namespace hh

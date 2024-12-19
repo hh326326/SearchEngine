@@ -16,8 +16,8 @@
 #include <utility>
 
 namespace hh {
-Configuration::Configuration(string file_path, Logger &logger)
-    : _file_path(std::move(file_path)), _logger(logger) {
+Configuration::Configuration(string file_path)
+    : _file_path(std::move(file_path)) {
   Load();
 }
 
@@ -27,10 +27,11 @@ void Configuration::Load() {
 }
 
 void Configuration::LoadConfig() {
+  auto logger = Logger::GetLogger();
   nlohmann::json mjson;
   std::ifstream jsonfile(_file_path);
   if (!jsonfile.is_open()) {
-    LOG_ERROR("open {} fail.");
+    logger->error("open {} fail.");
   }
   try {
     jsonfile >> mjson;

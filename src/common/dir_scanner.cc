@@ -13,12 +13,13 @@ namespace hh {
 using std::filesystem::directory_iterator;
 using std::filesystem::path;
 
-DirScanner::DirScanner(Logger &logger, IConfiguration &config)
-    : _logger(logger), _config(config) {}
+DirScanner::DirScanner( IConfiguration &config)
+    :  _config(config) {}
 
 // 调用Traverse()函数, 扫描指定目录下的所有文件
 void DirScanner::operator()() {
-  LOG_INFO("{}", _config.GetConfig()["dir_people"]);
+  auto logger = Logger::GetLogger();
+  logger->info("{}", _config.GetConfig()["dir_people"]);
   return Traverse(_config.GetConfig()["dir_people"]);
 }
 
@@ -26,9 +27,10 @@ vector<string> &DirScanner::GetFilesPath() { return _file_path_list; }
 
 // 获取目标文件夹下的所有文件
 void DirScanner::Traverse(const string &dir_path) {
+  auto logger = Logger::GetLogger();
   const path test_dir_path = {dir_path};
   if (!exists(test_dir_path)) {
-    LOG_ERROR("Directory not exist: {}", dir_path);
+    logger->error("Directory not exist: {}", dir_path);
     return;
   }
   for (const auto &entry : directory_iterator(test_dir_path)) {

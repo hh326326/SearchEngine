@@ -5,18 +5,19 @@
 #include <iostream>
 
 namespace t1 {
-hh::Logger logger("/home/hh/searchEngine/log/unit_test_empty.log");
+
+auto logger = hh::Logger::GetLogger("./log/unit_test_empty.log");
 TEST_CASE("Configuration Load internal") {
   const char *test_file_path = "/home/hh/searchEngine/conf/configure.json";
-  hh::Configuration config{test_file_path, logger};
+  hh::Configuration config{test_file_path};
 
   SUBCASE("test LoadConfig() and test LoadStopWordList()") {
     config.LoadConfig();
     auto &config_map = config.GetConfig();
-    // for (const auto& [key, value] : config_map) {
-    //   std::cout << key << ":" << value << std::endl;
-    //   logger.Info("{}:{}", key, value);
-    // }
+    for (const auto& [key, value] : config_map) {
+      // std::cout << key << ":" << value << std::endl;
+      logger->info("{}:{}", key, value);
+    }
     CHECK(config_map.at("stop_word_eng") != "wrong_path");
     CHECK(config_map.at("stop_word_eng") ==
           "/home/hh/searchEngine/data/raw_data/yuliao/stop_words_eng.txt");
@@ -55,10 +56,10 @@ TEST_CASE("Configuration Load internal") {
     auto stop_word_zh_list = config.GetStopWordZhList();
     auto search = stop_word_eng_list.find("simpleNO1");
 
-    for (const auto &word : stop_word_zh_list) {
-      std::cout << word << '\n'; // 打印所有中文停用词
-    }
-    std::cout << '\n';
+//     for (const auto &word : stop_word_zh_list) {
+//       std::cout << word << '\n'; // 打印所有中文停用词
+//     }
+//     std::cout << '\n';
 
     CHECK(search == stop_word_eng_list.end());
     search = stop_word_eng_list.find("won");
